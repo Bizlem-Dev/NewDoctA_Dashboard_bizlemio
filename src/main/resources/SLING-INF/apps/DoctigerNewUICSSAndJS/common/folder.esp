@@ -1,0 +1,234 @@
+<section class="content">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="dropdown">
+              <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Add New
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Add New Folder</a></li>
+              </ul>
+            </div><br>
+          </div>
+          <div class="col-md-12">
+            <div class="box box-primary">
+              <div class="box-header with-border">
+                <h3 class="box-title">Folder</h3>
+              </div>
+              <div class="box-body">
+                <div class="row" id="tableHeaderFolder">
+                
+                <!-- first box start here -->
+                
+                  <!-- <div class="col-md-2 folder-box-sec">
+                    <a href="#newFileData" data-toggle="tab">
+                    
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>NavJeevan_Tower</span>
+                      </div>
+                      
+                    </a>
+                  </div> -->
+                  
+                  <!-- first box end here -->
+                  
+                  
+                  
+               <!--    <div class="col-md-2 folder-box-sec">
+                    <a href="#newFileData" data-toggle="tab">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>Om Pride_Building</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                     <a href="#newFileData" data-toggle="tab">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>Karamveer Sports_Complex</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                     <a href="#newFileData" data-toggle="tab">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>TechPark_Complex</span>
+                      </div>
+                    </a>
+                  </div> -->
+                  
+                  
+                  
+                  <!-- <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-2 folder-box-sec">
+                    <a href="new-file.html">
+                      <div class="folder-box">
+                        <i class="fa fa-folder" aria-hidden="true"></i>&nbsp;&nbsp;
+                        <span>test</span>
+                      </div>
+                    </a>
+                  </div> -->
+                  
+                  
+                </div>                  
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+  
+    

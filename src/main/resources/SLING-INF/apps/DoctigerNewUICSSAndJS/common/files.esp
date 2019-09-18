@@ -1,0 +1,119 @@
+
+<section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="contact-container">
+        <div class="col-xs-12">
+          <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Add New
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Add New File</a></li>
+            </ul>
+          </div><br>
+        </div>
+        <div class="col-xs-12">
+          <div class="box">
+            
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover file-section">
+                <tbody>
+                  <tr>
+                    <th>Document Name</th>
+                    <th>Version</th>
+                    <th>Created By</th>
+                    <th>Dated</th>
+                    <th></th>
+                  </tr>
+                  <tr>
+                    <a href="#">
+                      <td>Welcome Letter</td>
+                      <td>2.0</td>
+                      <td>admin</td>
+                      <td>20/02/2019</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </a>
+                  </tr>
+                  <tr>
+                    <a href="#">
+                      <td>SPA</td>
+                      <td>2.0</td>
+                      <td>admin</td>
+                      <td>20/02/2019</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </a>
+                  </tr>
+                  <tr>
+                    <a href="#">
+                      <td>Lease Agreement</td>
+                      <td>2.0</td>
+                      <td>admin</td>
+                      <td>20/02/2019</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </a>
+                  </tr>
+                  <tr>
+                    <a href="#">
+                      <td>Welcome Letter</td>
+                      <td>2.0</td>
+                      <td>admin</td>
+                      <td>20/02/2019</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </a>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        
+        </div>
+      </div>
+    </section>

@@ -1,0 +1,114 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Team</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="content-header second-hed-team">
+      <div class="row">
+        <div class="col-md-6 text-left">
+          <p>All users</p>
+        </div>
+        <div class="col-md-6 text-right">
+          <button class="btn btn-default" data-toggle="modal" data-target="#invite-new-user"><i class="fa fa-plus"></i> <i class="fa fa-user"></i>&nbsp; INVITE NEW USERS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+           <table class="table table-hover" style="background-color: #fff;">
+            <thead>
+              <tr>
+                <th scope="col">User</th>
+                <th scope="col">Email</th>
+                <th scope="col">Role</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr-text-img">
+                <td><img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/user1.jpg">Geetanjali Agarwal</td>
+                <td>geetanjali@bizlem.com</td>
+                <td>Admin (Owner)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>  
+    </section>
+    <!-- /.content -->
+
+    <!-- model start second -->
+    <div class="modal fade" id="invite-new-user" role="dialog">
+      <div class="modal-dialog payment-box-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Invite new user</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" name="" class="form-control" placeholder="User email">
+                </div>
+              </div>
+              <div class="col-md-12">
+                <p>A PandaDoc invitation will be sent to the email address entered above</p>
+              </div>
+              <div class="col-md-12 sub-title">
+              <div class="border-brand-new"></div>
+                <p>TEAM ROLES</p>
+              </div>
+              <div class="col-md-12">
+                <p>System roles</p>
+              </div>
+              <div class="col-md-12">
+                <input type="radio" name="gender" value="male" checked> <strong style="font-size:17px;"> Member</strong> <br>
+                <p class="sub-rdio-text">Can create, edit and send their own documents but cannot see or access documents created by other team members. Cannot edit Templates created by others but can create their own Templates and Content Library items.</p>
+              </div>
+              <div class="col-md-12">
+                <input type="radio" name="gender" value="male"> <strong style="font-size:17px;"> Manager</strong> <br>
+                <p class="sub-rdio-text">Can view, edit, and send documents created by any team member in the workspace. Can edit all Templates and Content Library items. They can add new team members to the workspace.</p>
+              </div>
+              <div class="col-md-12">
+                <input type="radio" name="gender" value="male"> <strong style="font-size:17px;"> Admin</strong> <br>
+                <p class="sub-rdio-text">Can view, edit, and send documents created by any team member in the workspace. Can edit all Templates and Content Library items. They have access to all settings, except billing and ability to create new workspaces.</p>
+              </div>
+              
+              <div class="col-md-12 background-color-box">
+                <p>Adding users will result in additional charges. At the end of your trial you will be billed for the number of seats in your account at that time.</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-12 text-right">
+                <a href="#" class="btn btn-success">INVITE NEW USER</a>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

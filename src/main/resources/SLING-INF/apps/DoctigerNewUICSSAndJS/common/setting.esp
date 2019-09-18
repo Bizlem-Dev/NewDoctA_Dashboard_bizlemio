@@ -1,0 +1,252 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Workspace</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+    <section class="content-header main-head main-head-sec">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;"><strong>Bizlem.com</strong> workspace settings</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav">
+              <button class="btn btn-success" style="margin-top:8px;">SAVE CHANGE</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="content" style="margin-top:-30px;">
+
+      <div class="row setting-box">
+          <div class="col-md-12 head">
+              <h3>Available signature types</h3>
+          </div>
+          <div class="col-md-12 mt-3">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="form-group">
+                    <div class="box">
+                      <input class="custom-control-input" id="House-type-property" name="type_property[]" type="checkbox" checked="checked" value="1">  
+                      <div class="perent-box text-center">
+                        <label for="House-type-property"> 
+                          <img src="https://dr79nymq4x8i9.cloudfront.net/img/signature-draw.svg">
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <div class="box">
+                      <input class="custom-control-input" id="House-type-property-1" name="type_property[]" type="checkbox" checked="checked" value="1">  
+                      <div class="perent-box text-center">
+                        <label for="House-type-property-1"> 
+                          <img src="https://dr79nymq4x8i9.cloudfront.net/img/signature-type.svg">
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <div class="box">
+                      <input class="custom-control-input" id="House-type-property-2" name="type_property[]" type="checkbox" checked="checked" value="1">  
+                      <div class="perent-box text-center">
+                        <label for="House-type-property-2"> 
+                          <p class="checked-text">Upload Image</p>
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Available signature types</h3>
+          </div>
+          <div class="col-md-12 mt-3">
+            <div class="row">
+              <div class="col-md-2">
+                <div class="form-group">
+                    <div class="box">
+                      <input class="custom-control-input" id="House-type-property-4" name="type_property[]" type="checkbox" checked="checked" value="1">  
+                      <div class="perent-box text-center">
+                        <label for="House-type-property-4"> 
+                          <img src="https://dr79nymq4x8i9.cloudfront.net/img/signature-draw.svg">
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <div class="box">
+                      <input class="custom-control-input" id="House-type-property-5" name="type_property[]" type="checkbox" checked="checked" value="1">  
+                      <div class="perent-box text-center">
+                        <label for="House-type-property-5"> 
+                          <img src="https://dr79nymq4x8i9.cloudfront.net/img/signature-type.svg">
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Default theme</h3>
+          </div>
+          <div class="col-md-12">
+            <p>Select a default workspace theme. This theme will be applied when creating all new documents, templates and content library items.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="form-group">
+                <select class="form-control">
+                  <option>Basic</option>
+                  <option>Script</option>
+                  <option>Volt</option>
+                  <option>Pure</option>
+                </select>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <p>You can edit the styles of your default theme in the template's design panel.</p>
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Expiration settings</h3>
+          </div>
+          <div class="col-md-12">
+            <p>These settings will be applied when creating all new documents and templates.</p>
+          </div>
+          <div class="col-md-12">
+            <p>Expire sent documents in</p> <p class="div-box"> <input type="number" name="" placeholder="60" style="width:50px;padding:0px 5px;margin:0px 5px;"></p> <p>days</p>
+          </div>
+          <div class="col-md-12">
+            <input type="checkbox" name="vehicle1" value="Bike"> Warn signers 1 day prior to expiration
+          </div>
+          <div class="col-md-12 mt-3">
+            <p>You can adjust default expiration settings for any particular document or template.</p>
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Auto reminders settings</h3>
+          </div>
+          <div class="col-md-12">
+            <p>These settings will be applied when creating all new documents and templates.</p>
+          </div>
+          <div class="col-md-12 div-box">
+            <input type="checkbox" name="vehicle1" value="Bike"> Send first reminder in <p>5</p> days
+          </div>
+          <div class="col-md-12 div-box">
+            <div class="row">
+              <div class="col-md-1">
+                <input type="checkbox" name="vehicle1" value="Bike"> Repeat 
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                    <select class="form-control" disabled="disabled">
+                      <option>Basic</option>
+                      <option>Script</option>
+                      <option>Volt</option>
+                      <option>Pure</option>
+                    </select>
+                </div>
+              </div>
+              <div class="col-md-9">
+                until completed or expired
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            You can adjust default reminders settings for any particular document or template.
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Email attachment</h3>
+          </div>
+          <div class="col-md-12">
+            When a document is completed, recipients will receive an automated email with a PDF copy of the document attached.
+          </div>
+          <div class="col-md-12">
+            <input type="checkbox" name="vehicle1" value="Bike"> &nbsp;Attach a PDF of the completed document to email
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Default currency</h3>
+          </div>
+          <div class="col-md-12">
+            <p>Selected default currency will be applied when creating pricing tables, payment blocks, etc.</p>
+          </div>
+          <div class="col-md-5">
+            <div class="form-group">
+                <select class="form-control">
+                  <option>USD Us dollers</option>
+                  <option>AED UAE dirhams</option>
+                  <option>AFN Afghanian drams</option>
+                </select>
+            </div>
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+              <h3>Document auto numbering</h3>
+          </div>
+          <div class="col-md-12">
+              <p>Document auto numbering uniquely numbers documents within an applied sequence.</p>
+          </div>
+          <div class="col-md-12 add-seq-btn">
+            <button class="btn btn-defualt">ADD SEQUENCE</button>
+          </div>
+          <div class="col-md-12 mt-3">
+            <p>You can apply a sequence on template or document level.</p>
+            <div class="border-brand"></div>
+          </div>
+          <div class="col-md-12 head">
+            <h3>Recipient view language</h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6" style="padding-left:30px;">
+              <p>Select a default public view language. Document recipients will view the platform and all PandaDoc notification emails in the selected language. *Note: these settings will not apply to any existing Templates or Documents.*</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-5" style="padding-left:30px;">
+              <div class="form-group">
+                  <select class="form-control">
+                    <option>English - United State(EN-US)</option>
+                    <option>French - Franch (FR - FR)</option>
+                  </select>
+              </div>
+            </div>
+          </div>
+          <div class="border-brand"></div>
+          <div class="col-md-12 head">
+            <h3>Other settings</h3>
+          </div>
+          <div class="col-md-12">
+            <input type="checkbox" name="vehicle1" value="Bike"> &nbsp; Enable document completion confirmation
+          </div>
+      </div>
+
+    </section>

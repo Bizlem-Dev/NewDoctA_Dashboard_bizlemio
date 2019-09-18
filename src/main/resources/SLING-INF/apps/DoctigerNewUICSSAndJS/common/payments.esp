@@ -1,0 +1,228 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Payments</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <a href="#" data-toggle="modal" data-target="#payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/logo/authorize_net.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>Authorize.net</h3>
+                  <p>Provide payment processing to help businesses accept payments.</p>
+                </div>
+                <div class="col-md-1 box-payment-text-off">
+                  <p>off</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-6">
+          <a href="#" data-toggle="modal" data-target="#payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/logo/paypal.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>PayPal</h3>
+                  <p>Accept payments online through credit cards, bank accounts, or account balances.</p>
+                </div>
+                <div class="col-md-1 box-payment-text-off">
+                  <p>off</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-6 mt-3">
+          <a href="#" data-toggle="modal" data-target="#payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/logo/quickbooks.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>QuickBooks Payments</h3>
+                  <p>Smarter business tools for the world’s hardest workers.</p>
+                </div>
+                <div class="col-md-1 box-payment-text-off">
+                  <p>off</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-6 mt-3">
+          <a href="#" data-toggle="modal" data-target="#payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/logo/square.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>Square</h3>
+                  <p>Accept every payment quickly, easily, and securely.</p>
+                </div>
+                <div class="col-md-1 box-payment-text-off">
+                  <p>off</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-6 mt-3">
+          <a href="#" data-toggle="modal" data-target="#payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/logo/stripe.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>Stripe</h3>
+                  <p>Quick and secure way to accept credit/debit cards online.</p>
+                </div>
+                <div class="col-md-1 box-payment-text-off">
+                  <p>off</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-6 mt-3">
+          <a href="#" data-toggle="modal" data-target="#second-payment-box">
+            <div class="box-payment">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/payments/request.svg">
+                </div>
+                <div class="col-md-8 box-payment-text">
+                  <h3>Request your gateway</h3>
+                  <p>We will prioritize frequently requested payment gateways.</p>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+      </div>  
+    </section>
+    <!-- /.content -->
+
+    <!-- model start second -->
+    <div class="modal fade" id="payment-box" role="dialog">
+      <div class="modal-dialog payment-box-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Authorize.net</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Connect your Authorize.net account to include payment processing in your PandaDoc documents.</p>
+              </div>
+              <div class="col-md-12">
+                <a href="">Integration setup help <i class="fa fa-link"></i></a>
+                <div class="border-brand"></div>
+              </div>
+              <div class="col-md-12 sub-title">
+                <p>GATEWAY RATE</p>
+              </div>
+              <div class="col-md-12">
+                <p><strong>Set by Authorize.net</strong></p>
+              </div>
+              <div class="col-md-12 sub-title">
+                <p>PANDADOC TRANSACTION FEE</p>
+              </div>
+              <div class="col-md-12 sub-title">
+                <p><strong>$0.00</strong> for each successful transaction $199 or less.</p>
+                <p><strong>$2.00</strong> for each successful transaction over $199.</p>
+              <hr>
+              </div>
+              <div class="col-md-12">
+                <p>TERMS OF SERVICE</p>
+                <br>
+                <br>
+                <br>
+              </div>
+              <div class="col-md-12 sub-title">
+                <p>Fees are exclusive of all taxes, levies, or duties imposed by taxing authorities, and you shall be responsible for payment of all such taxes, levies, or duties, excluding only United States (federal or state) taxes based solely on PandaDoc’s income. All Fees described herein will be billed to you monthly, with payments due within 30 days of the invoice date.</p>
+              </div>
+              <div class="col-md-12">
+                <p>By clicking “Connect”, you agree to pay the fees outlined above.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="#" class="btn btn-success">CONNECT</a>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- model start second -->
+    <div class="modal fade" id="second-payment-box" role="dialog">
+      <div class="modal-dialog payment-box-modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Which gateway are you looking for?  </h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p>We will take note of your requirement, and we will keep you posted.</p>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <input type="text" name="" class="form-control" placeholder="Gateway name">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <a href="#" class="btn btn-success">SUBMIT</a>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

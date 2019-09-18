@@ -1,0 +1,87 @@
+<section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="contact-container">
+        <div class="col-xs-12">
+          <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">Add New
+            <span class="caret"></span></button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Add New File</a></li>
+            </ul>
+          </div><br>
+        </div>
+        <div class="col-xs-12">
+          <div class="box">
+            
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding">
+              <table class="table table-hover file-section">
+               
+                <thead id="headerInsideData">
+                <!--  
+                <tr>
+                  
+                     <th>Name</th>
+                    <th>Owner</th>
+                    <th>Last modified me </th>
+                    <th>File Size</th>
+                    
+                  </tr> 
+                  -->
+                  </thead>
+                  
+                   <tbody id="bodyInsideData">
+                 <!-- <tr>
+                  
+                       <td>Website Layout Design</td>
+                      <td>me</td>
+                      <td>Nov 2,2018</td>
+                      <td>-</td> 
+                      
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td> 
+                      
+                  </tr>-->
+                  
+                  <!-- <tr>
+                      <td>New-Design-blue-5-Nov.zip</td>
+                      <td>me</td>
+                      <td>Nov 10,2018</td>
+                      <td>2 MB</td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-defualt dropdown-toggle" type="button" data-toggle="dropdown">
+                          <span><i class="fa fa-ellipsis-h" aria-hidden="true"></i></span></button>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Rename</a></li>
+                            <li><a href="#">Delete</a></li>
+                            <li><a href="#">Download</a></li>
+                            <li><a href="#">Share URL</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                  </tr> -->
+                  
+                  
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        
+        </div>
+      </div>
+    </section>

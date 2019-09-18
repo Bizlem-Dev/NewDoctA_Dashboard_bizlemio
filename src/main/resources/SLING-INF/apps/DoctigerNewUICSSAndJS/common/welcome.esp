@@ -1,0 +1,575 @@
+<section class="content" id="welcomeHideId">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="contact-container">
+            <div  class="col-md-12">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="box box-primary">
+                    <div class="box-header text-center bg-info with-border">
+                      <h5 class="box-title">Select Document</h5>
+                    </div>
+                    <div class="box-body" style="min-height:214px;">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <div class="radio">
+                                      <label class="mr-2" style="width: 50%; font-size: 16px;">
+                                          <input type="radio" name="options1" class="options1" value="0" checked>
+                                          Start with Non Disclosure Agreement
+                                      </label>
+                                       <label class="mr-2" style=" font-size: 16px;">
+                                          <input type="radio" name="options1" class="options1" value="1">
+                                          Select Domain    
+                                      </label>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row radio-option-select mb-1">
+                                <div class="col-md-6" id="domainnameId">
+                                  <div class="form-group">
+                                    <label>Select Domain</label>
+                                    <select class="form-control domainselectclasscls" id="domainselectcls">
+                                      <option>Select Domain</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-6" style="display: none;" id="domainsubId">
+                                  <div class="form-group">
+                                    <label>Select SubDomain</label>
+                                    <select class="form-control domainsubselectclasscls" id="domainsubselectcls">
+                                      <option>Select Sub Domain</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-12" style="display: none;" id="mainRadioDiv">
+                                  <div class="radio" id="radioSingleId">
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options3" value="option1" checked>
+                                           Welcome Letter
+                                      </label>
+                                       <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options4" value="option2">
+                                          Spa   
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options5" value="option2">
+                                          Report Card  
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options6" value="option2">
+                                          Invoice 
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options7" value="option2">
+                                          Offer Letter 
+                                      </label>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>Data Source</label>
+                                  <select class="form-control" id="list-form-data" onclick="showDataSourceWelcomePage()">
+                                  <option value="1">Select DataSource</option>
+                                    <option value="1">Merge Using Test Data Set</option>
+                                    <option value="2">Enter Data in Form</option>
+                                  </select>
+                                </div>
+                              </div>
+                             
+                            </div>
+                          </form>
+                        </div>
+                         <div class="col-md-12 mb-1">
+                                 <!--  <button class="btn btn-success" onclick="DGT();">Generate Document</button> -->
+                                  <button class="btn btn-success" disabled onclick="DocumentGenerationWelcomePage();" id="welcomeGenerateDocId">Generate Document</button>
+                                  <!-- <button class="btn btn-success">Preview Document</button> -->
+                                  <button type="button" id="previewBtnWelcome" disabled class="btn btn-success modalClass" data-toggle="modal" data-target="#myModal" onclick="DocumentPreviewpdfWelcomePage();">Preview Document</button>
+                                  <br>
+                                  <br>
+                             <p id="documentUrlGenerateIdWelcomePage"></p>
+                                  
+                              </div>
+                      </div>    
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title" style="float: left; padding-top: 10px;">Steps</h5>
+                      <select id="stepUlSelect" class="form-control" style="float: right; width: 150px;">
+                        <option value="1">Simple Document</option>
+                        <option value="2">Advanced Document</option>
+                        <option value="3">Simple Contract</option>
+                        <option value="4">Advanced Contract</option>
+                      </select>
+                    </div>
+                    <div class="box-body right-step-part">
+                     <!--  <ul>
+                        <li><p>1</p><a href="" onclick="return false">Step 1</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Step 2</a></li>
+                        <li><p>3</p><a href="" onclick="return false">Step 3</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Step 4</a></li>
+                      </ul> -->
+                      
+                      <ul class="stepUl1">
+                        <li><p>1</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Generate First Document </a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create the Mail Template</a></li>
+                        <li><p>5</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl2">
+                        <li><p>1</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Generate First Document</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create the Mail template </a></li>
+                        <li><p>5</p><a href="" onclick="return false">Create Rule Engine </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Setup a Dynamic Document</a></li>
+                        <li><p>7</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl3">
+                        <li><p>1</p><a href="" onclick="return false">Setup Clauses </a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Add Clauses to template</a></li>
+                        <li><p>5</p><a href="" onclick="return false">Generator first document </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Create a Mail template</a></li>
+                        <li><p>7</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl4">
+                        <li><p>1</p><a href="" onclick="return false">Setup Clauses </a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create Rule Engine </a></li>
+                        <li><p>5</p><a href="" onclick="return false">Setup a Dynamic Clause </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Setup a Multi-Lingual Clause </a></li>
+                        <li><p>7</p><a href="" onclick="return false">Setup Clause Inter referencing</a></li>
+                        <li><p>8</p><a href="" onclick="return false">Setup a Dynamic Document </a></li>
+                        <li><p>9</p><a href="" onclick="return false">Setup a Dynamic Clause</a></li>
+                        <li><p>10</p><a href="" onclick="return false">Add Clauses To template</a></li>
+                        <li><p>11</p><a href="" onclick="return false">Generate First Document </a></li>
+                        <li><p>12</p><a href="" onclick="return false">Create a mail template </a></li>
+                        <li><p>13</p><a href="" onclick="return false">Setup Webservice</a></li>
+                        <li><p>14</p><a href="" onclick="return false">Add Contacts to Contact library</a></li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Webinar Video</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="row">
+                          <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel" style="margin-top:10px;">
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                  <div class="item active">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                                  <div class="item">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-md-12" style="margin-top:-10px;">
+                              <div class="controls pull-right hidden-xs">
+                                  <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a> &nbsp;<a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Samsung TV</a>
+                              <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Bicycle
+                              </a>
+                            <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Xbox One </a>
+                            <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">PlayStation 4
+                              </a>
+                            <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Samsung TV
+                              <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span> </a>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Bicycle
+                              </a>
+                            <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Xbox One </a>
+                            <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">PlayStation 4
+                              </a>
+                            <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">FAQs</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="parent-container">
+                        <ul class="faq">
+                          <li>
+                            <h3 class="question">What is Template Used For?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                              A Template is a file that serves as a starting point for a new document. When you open a template, it is pre-formatted in some way. For example, you might use template in Microsoft Word that is formatted as a business letter. The template would likely have a space for your name and address in the upper left corner, an area for the recipient's address a little below that on the left site, an area for the message body below that, and a spot for your signature at the bottom.
+                            </div>
+                          </li>
+                          <li>
+                            <h3 class="question">What is the purpose of Data Source?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                             Data Source records the number of Data that will get Merge with your Template.It can be in the form of excel sheet, or you can enter your data manually, or just import your contacts and use them to generate documents.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+      </div>
+      </section>
+      
+      <div class="modal fade" id="enter-manually-form-data">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>Enter Manually</h3>
+              <form action="" method="">
+                <div class="contact-form">
+                  <div class="contact-form-left" style="width: 100%;">
+                    <div class="row">  
+                      <div class="col-md-12" id="enterManuallyWelcomeId">
+                        <!-- <div class="form-group">
+                          <input type="text" name="" class="form-control" placeholder="Enter value" disabled="disabled">
+                        </div> -->
+                        <!-- <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Company</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Address</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>DOB</label>
+                          <input type="text" name="" class="form-control">
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn cancel-btn" data-dismiss="modal" onclick="getDataSourceFormDataDynamicwelcome();">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+      <!-- <div class="modal fade" id="enter-manually2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>This is the test data we are using</h3>
+              <form action="" method="">
+                <div class="contact-form">
+                  <div class="contact-form-left" style="width: 100%;">
+                    <div class="row">  
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="text" name="" class="form-control" placeholder="Enter value" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" name="" value="test name" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Company</label>
+                          <input type="text" name="" value="text company" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Address</label>
+                          <input type="text" name="" value="test add" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>DOB</label>
+                          <input type="text" name="" value="10/07/1994" class="form-control" disabled="disabled">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      

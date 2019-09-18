@@ -1,0 +1,202 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#">Profile</a>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Personal information
+      </h1>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Quick Generator</h3>
+            </div>
+            <form role="form">
+              <div class="box-body">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" class="form-control" placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" class="form-control" placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input type="text" class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group email-ver-part">
+                      <label>Email is activated</label>
+                      <a href="#" class="btn btn-defualt" data-toggle="modal" data-target="#second-myModal">CHANGE EMAIL</a>
+                    </div>
+                  </div>
+                  <div class="col-md-4 text-center">
+                    <div class="row">
+                      <div class="col-md-12 profile-user-img">
+                        <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/user1.jpg">
+                      </div>
+                      <div class="col-md-12 upload-img-btn">
+                        <a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><i class="fa fa-upload"> </i>&nbsp;&nbsp; UPLOAD PHOTO</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer">
+                <button type="submit" class="btn btn-success">Save</button>
+              </div>
+            </form>
+            <hr>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="margin-top:-3px;">Password</h3>
+                    <p>Set a unique password to protect your personal account.</p>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Enter Current Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Enter New Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Enter Repeat New Password">
+                    </div>
+                    <button type="submit" class="btn btn-success">Change Save</button>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="margin-top:-3px;">Signature</h3>
+                  <div class="form-group">
+                      <input type="file" class="form-control" placeholder="Enter Current Password">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="margin-top:-3px;">Notifications</h3>
+                  <p>Send me an email when</p>
+                  <form action="/action_page.php">
+                    <input type="checkbox" name="vehicle1" value="Bike"> Any messages or notifications for documents sent by me<br>
+                    <div class="row">
+                      <div class="col-md-12" style="margin-left:10px;">
+                        <input type="checkbox" name="vehicle2" value="Car"> Document delivery failed<br>
+                        <input type="checkbox" name="vehicle3" value="1"> Document is opened by a recipient for the first time<br>
+                        <input type="checkbox" name="vehicle4" value="2"> Document is opened by a recipient every time<br>
+                        <input type="checkbox" name="vehicle5" value="3"> Document is completed by a recipient<br>
+                        <input type="checkbox" name="vehicle6" value="4"> Document is completed by all recipients<br>
+                        <input type="checkbox" name="vehicle7" value="5"> Comment is posted<br>
+                      </div>
+                    </div>
+                    <input type="checkbox" name="vehicle8" value="6"> Any messages or notifications for documents sent on my behalf<br><br>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <h3 style="margin-top:-3px;">Referral program</h3>
+                  <p>Click the button to get your unique referral link and start earning rewards.</p>
+                  <a href="" class="btn btn-primary">GET YOUR LINK</a>
+                  <h4 style="margin-top:10px;">What’s the status of your referrals? Visit your rewards dashboard to find out. <a href="">See rewards <i class="fa fa-link"></i></a></h4>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>  
+    </section>
+    <!-- /.content -->
+  <!-- model start -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Add Image</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <form method="post" action="#" id="#">
+                <div class="form-group files">
+                  <label>Drag & drop a file here </label>
+                  <input type="file" class="form-control" multiple="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+  <!-- model end -->
+
+  <!-- model start second -->
+  <div class="modal fade" id="second-myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Chnage Email</h4>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-12">
+              <p>For your security we’ll send instructions for this operation to your current email address <a href="">geetanjali@bizlem.com.</a></p>
+              <p>Click the link in the email to proceed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="row">
+            <div class="col-md-6 text-left">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+            <div class="col-md-6 text-right">
+              <a href="#" class="btn btn-success">SEND INTRUCTIONS</a>          
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

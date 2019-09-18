@@ -1,0 +1,128 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Saved messages</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-9 mesaage-text">
+           <p>Create saved messages that you can reuse when sending documents. <br> On the “Send Document” dialog, select one via the “Send Messages” button to add a saved message.</p>
+        </div>
+        <div class="col-md-12 mesaage-btn">
+          <button class="btn btn-success" data-toggle="modal" data-target="#myModal">CREATE NEW MESSAGE</button>
+          <button class="btn btn-defualt" data-toggle="modal" data-target="#msg-second">MANAGE SAVED MESSAGE</button>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+
+  <!-- model start -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog message-model">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Saved Messages</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-4 search-part-msg">
+                <div class="row">
+                  <form class="navbar-form" role="search">
+                    <div class="col-md-12">
+                      <div class="input-group add-on">
+                        <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 plus-link">
+                      <i class="fa fa-plus"> <a href="">Create New message</a></i>
+                    </div>
+                    <div class="col-md-12 mt-3 text-center">
+                      <p>No saved messages yet</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <form>
+                  <div class="form-group">
+                    <input type="text" name="" class="form-control" placeholder="Message Title">
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- model end -->
+
+  <!-- model start -->
+    <div class="modal fade" id="msg-second" role="dialog">
+      <div class="modal-dialog message-model msg-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Saved Messages</h4>
+          </div>
+          <div class="modal-body msg-second">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <form class="navbar-form" role="search">
+                    <div class="col-md-12">
+                      <div class="input-group add-on">
+                        <input class="form-control" placeholder="Search" name="srch-term" id="srch-term" type="text">
+                        <div class="input-group-btn">
+                          <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12 plus-link">
+                      <i class="fa fa-plus"> <a href="">Create New message</a></i>
+                    </div>
+                    <div class="col-md-12 mt-3 text-center">
+                      <p>No saved messages yet</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- model end -->

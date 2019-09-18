@@ -1,0 +1,83 @@
+ <div class="content-header">
+          <div class="box box-default color-palette-box">
+        <div class="box-header with-border">
+          <h3 class="box-title"> Approver</h3>
+        </div>
+        <div class="box-body">
+            <div class="row">
+            <div class="row"> <div class="col-md-8"><p id="approversavesuccess" style="text-align: center; font-size: large; color: green;">
+             </p></div></div>
+
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <label style="padding:5px 0px 0px 5px;">Select Type</label>
+                        </div>
+                        <div class="col-md-5" style="margin-left:-80px;">
+                            <select class="form-control" id="approvertype" >
+                                <option value="0">Select Type</option>
+								<option value="clause">Clause</option>
+								<option value="template">Template</option>
+								<option value="mail">Mail</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12" style="margin-top:20px;">
+                    <div class="row check-radio-op-third">
+                      <div class="form-group addMore">
+                          <div class="row addMore-main">
+                            <div class="col-sm-12 addMore-sub">
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <label style="padding-left:20px;">Select Level 1 Approver</label>
+                                </div>
+                                <div class="col-sm-4" id="approverlistdiv" style="margin-left:-80px;">
+                                    <select class="form-control approverlistcls" id="approverlistid1">
+                                        <option>Select Approver</option>
+                                        <option>Select Approver 1</option>
+                                        <option>Select Approver 2</option>
+                                        <option>Select Approver 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1 p-0">
+                                  <a class="btn btn-bg-brown displaysecondapprover sm-btn-custom btn-primary"><i class="fa fa-plus"></i></a>
+                                </div>  
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row secondapprover addMore-copy" style="display: none;margin-top:20px;">
+                            <div class="col-sm-12 addMore-sub" style="margin-top:10px;">
+                              <div class="row">
+                                <div class="col-sm-3">
+                                  <label style="padding-left:20px;">Select Level 1 Approver</label>
+                                </div>
+                                <div class="col-sm-4" id="approverlistdiv2" style="margin-left:-80px;">
+                                    <select class="form-control approverlistcls"  id="approverlistid2">
+                                        <option>Select Approver</option>
+                                        <option>Select Approver 1</option>
+                                        <option>Select Approver 2</option>
+                                        <option>Select Approver 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-1 p-0">
+                                  <a class="btn btn-bg-orange-new removesecondapprover sm-btn-custom btn-danger"><i class="fa fa-trash"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                  <input type="radio" name="approverpriority" checked="checked"> Approver By All <br>
+                  <input type="radio" name="approverpriority"> Approver By Either
+                </div>
+                <div class="col-md-12" style="margin-top:20px;">
+                    <input type="button" class="btn btn-primary saveapprover" name="save" value="Save">
+                </div>
+            </div>
+        </div>
+        <!-- /.box-body -->
+      </div>
+      </div>

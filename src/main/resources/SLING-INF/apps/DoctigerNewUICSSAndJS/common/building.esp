@@ -1,0 +1,420 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Building</span>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Current plan</h3>
+            </div>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-6 plan-title">
+                      <h2>Business Monthly</h2>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-success" data-toggle="modal" data-target="#myModal">CHANGE PLAN</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p class="print-text-des">Payment</p>
+                    </div>
+                    <div class="col-md-4">
+                      <strong style="font-size:18px;">$59</strong> <p class="print-text-des"> per month</p>
+                      <p class="mt-3">1 × regular , $588 ea.</p>
+                    </div>
+                    <div class="col-md-5 text-right">
+                      <a href="" class="btn btn-defualt">SAVE WITH ANNUAL PLAN</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p class="print-text-des">Next payment</p>
+                    </div>
+                    <div class="col-md-8">
+                      <span style="color:red;">Your trial expires in 8 days on Jun 14, 2019</span>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-3">
+                      <p class="print-text-des">Coupon</p>
+                    </div>
+                    <div class="col-md-8 coupon">
+                      <a href="" class="btn btn-defualt" data-toggle="modal" data-target="#coupon">REDEEM A COUPON</a>
+                    </div>
+                  </div>
+                  <div class="row mt-3">
+                    <div class="col-md-3">
+                      <p class="print-text-des">Contact us</p>
+                    </div>
+                    <div class="col-md-8">
+                      <span>Have questions? <strong>+1 415-779-0222</strong></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 payment-box">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Payment & account details</h3>
+            </div>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-6 payment-list">
+                      <h2>No credit card on file</h2>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <a href="" class="btn btn-success" data-toggle="modal" data-target="#add-card">ADD CARD</a>
+                    </div>
+                    <div class="col-md-12 payment-text">
+                      <table>
+                        <tr>
+                          <td width="50%"><span class="title-text">Send receipts to</span></td>
+                          <td><span class="sub-title-text">geetanjali@bizlem.com</span></td>
+                        </tr>
+                        <tr>
+                          <td width="50%"><span class="title-text">CC receipts to</span></td>
+                          <td><span class="sub-title-text">email</span></td>
+                        </tr>
+                        <tr>
+                          <td width="50%"><span class="title-text">Account owner</span></td>
+                          <td><span class="sub-title-text">geetanjali@bizlem.com</span></td>
+                          <td><span class="sub-title-text" style="margin-left:30px;"><a href="" style="color:#47B972;" data-toggle="modal" data-target="#change">change</a></span></td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="col-md-12 link mt-3">
+                        <a href="#">Cancel your subscription</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Seats usage</h3>
+            </div>
+            <div class="box-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="row">
+                    <div class="col-md-6 plan-title">
+                      <h2>1 seat</h2>
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-success">MANAGE SEATS</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="border"></div>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <p class="print-text-des">1 occupied</p>
+                        </div>
+                        <div class="col-md-6 text-right">
+                          <p class="print-text-des">0 available</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->
+
+    <!-- model start -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Manage subscription</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Compare PandaDoc plans and choose the right solution for your business at our <a href="">Pricing page</a></p>
+              </div>
+              <div class="col-md-12 mt-3 model-paln">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 style="margin:0px;">Individual Annual</h2>
+                    <p class="print-text-des">$15 × 1 seats × 12 months = $180 annually</p>
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <a href="" class="btn btn-success">SELECT PLAN</a>
+                  </div>
+                </div>
+              <hr>
+              </div>
+              <div class="col-md-12 model-paln">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 style="margin:0px;">Business Annual is <a href="">your plan</a></h2>
+                    <p class="print-text-des">$49 × 1 seats × 12 months = $588 annually</p>
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <a href="" class="btn btn-success">UPDATE PLAN</a>
+                  </div>
+                </div>
+                <hr>
+              </div>
+              <div class="col-md-12 model-paln">
+                <div class="row">
+                  <div class="col-md-8">
+                    <h2 style="margin:0px;">Enterprise Annual</h2>
+                    <p class="print-text-des">$89 × 1 seats × 12 months = $1,068 annually</p>
+                  </div>
+                  <div class="col-md-4 text-right">
+                    <a href="" class="btn btn-success">SELECT PLAN</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model end -->
+
+    <!-- model start -->
+    <div class="modal fade" id="coupon" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Redeem coupon code</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <form action="#" method="get">
+                  <div class="form-group">
+                    <label>ENTER YOUR COUPON CODE:</label>
+                    <input type="text" name="q" class="form-control" placeholder="COUPON CODE">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model end -->
+
+    <!-- model start -->
+    <div class="modal fade" id="add-card" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Payment details</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <form action="#" method="get">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>FIRST NAME</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>LAST NAME</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>CARD NUMBER</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>EXPIRES</label>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="MM">
+                              </div>
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="YY">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>CVV  </label>
+                            <input type="text" class="form-control" placeholder="">
+                          </div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>ADDRESS</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>CITY</label>
+                        <input type="text" class="form-control" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                          <label>COUNTRY</label>
+                          <select class="form-control">
+                            <option>United State</option>
+                            <option>option 2</option>
+                            <option>option 3</option>
+                            <option>option 4</option>
+                            <option>option 5</option>
+                          </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group">
+                              <label>STATE</label>
+                              <select class="form-control">
+                                <option>Alabram</option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                              </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group">
+                            <label>ZIP CODE </label>
+                            <input type="text" class="form-control" placeholder="">
+                          </div>
+                        </div>  
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12 add-num">
+                      <a href="" class="btn btn-defualt">+ ADD VAT NUBMER</a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <h4>On Jun 14, 2019, your credit card will be charged <strong>$588</strong> above minus any account credits and applied coupons.</h4>
+                    </div>
+                    <div class="col-md-12 mt-3">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <input type="checkbox" name="vehicle" value="Bike"><br>
+                        </div>
+                        <div class="col-md-11">
+                          I have read the Payment Policy and understand that my subscription will automatically renew at the end of the subscription term unless I cancel it as provided in the policy   
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <div class="row">
+              <div class="col-md-6 text-left">
+                <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+              </div>
+              <div class="col-md-6 text-right">
+                <button type="button" class="btn btn-success" data-dismiss="modal">UPDATE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model end -->
+
+    <!-- model start -->
+    <div class="modal fade" id="change" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Change account owner</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-12">
+                <p>Choose a person from your Team whom you'll transfer all owner's responsibilities to. If you want to transfer ownership to a person outside of your Team, first add them to it.</p>
+              </div>
+              <div class="col-md-12">
+                <form>
+                  <div class="form-group">
+                    <input type="text" name="" class="form-control" placeholder="Name or email">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- model end -->

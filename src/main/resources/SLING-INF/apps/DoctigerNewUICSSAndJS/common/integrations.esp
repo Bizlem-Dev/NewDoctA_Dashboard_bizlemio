@@ -1,0 +1,284 @@
+ <section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Integrations</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-4">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-pipedrive.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Pipedrive is a CRM-replacing sales pipeline management tool.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-salesforce.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Sell smarter and faster with the world's #1 CRM.</p>
+                </div>
+                <div class="col-md-12 btn-section">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-hubspot.png">
+                </div>
+                <div class="col-md-12">
+                  <p>HubSpot CRM is the flexible, intuitive CRM system for your small business..</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-webhook.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Use webhooks to be notified about events that happen in a PandaDoc account.</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-basecrm.png">
+                </div>
+                <div class="col-md-12">
+                  <p>CRM software geared towards scientifically making your business more productive.</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-prosperworks.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Copper (formerly ProsperWorks) is a Simple CRM for Google Apps.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-insightly.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Customer Relationship & Project Management. Easy. Powerful. Affordable.</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-xero.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Xero is an online accounting software for small businesses.</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-zohocrm.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Zoho CRM gives you a 360-degree view of your complete sales cycle and pipeline.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-sugar-crm.png">
+                </div>
+                <div class="col-md-12">
+                  <p>SugarCRM is an innovative and affordable customer relationship management tool.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-closeio.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Close.io CRM eliminates manual data entry and helps sales teams close more deals.</p>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <input type="checkbox" data-toggle="toggle">
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-salesforceiq.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Intelligent CRM for small businesses and productivity apps for sales teams.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-nutshell.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Nutshell is a modern, cloud application to help manage your leads and customers.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-nimble.png">
+                </div>
+                <div class="col-md-12">
+                  <p>CRM system combined with the power of social media.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+        <div class="col-md-4 mt-3">
+          <a href="#">
+            <div class="box-payment integrations-box text-center">
+              <div class="row">
+                <div class="col-md-12">
+                  <img src="https://dr79nymq4x8i9.cloudfront.net/img/integrations/logo-bpmonline.png">
+                </div>
+                <div class="col-md-12">
+                  <p>Unique CRM to empower organizations to accelerate time-to-strategy execution.</p>
+                </div>
+                <div class="col-md-12">
+                  <button class="btn btn-defualt">LEARN MORE</button>
+                </div>
+              </div>
+            </div>
+          </a> 
+        </div>
+      </div>  
+    </section>
