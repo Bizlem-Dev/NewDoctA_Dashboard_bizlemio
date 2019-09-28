@@ -8,6 +8,8 @@ if(document.getElementById("email").value=="anonymous"){
 }
 
 
+
+
 //var group="G1";
 var group;
 var role;
@@ -18,9 +20,76 @@ var sslCheck=window.location.href;
 
 var clauseapproveljson={};
 
+
+//for leadconvert MergeTail...start....
+var skutypeOutside;
+function getSkui() {
+	
+	$.ajax({
+		
+		type: "GET",
+		url: "/portal/servlet/service/GetShoppingOrfreetrialHideShowSku?email="+Email,
+		async: false,
+		success: function (data) {
+			console.log("hideShowSkuWise: "+data)
+			
+			var isJsonValid=IsJsonString(data);
+			if(isJsonValid){
+				
+				var datajson=JSON.parse(data);
+
+				if( datajson.length!=0 ) {
+					
+					var nodepath="";
+					var skutype="";
+					
+					if(datajson.hasOwnProperty("nodepath")){
+					    nodepath=datajson.nodepath;
+					} // nodepath close check
+					if(datajson.hasOwnProperty("skutype")){
+					    skutype=datajson.skutype;
+					} // skutype close check
+
+					if(nodepath.includes("freetrial")){
+
+					} // freetrial close here
+					else{
+						if( !isEmpty(skutype) ){
+							if( skutype=="doctiger601" ){
+								skutypeOutside=skutype;
+								/*$('.mailSimpleRemove').remove();  // mail data remove from slected to previous
+								
+								document.getElementById("simpleTemplate").setAttribute("id", "multipleGetDropdownList");*/
+								//$("col").attr('id', 'newID');
+								
+								
+								
+							}
+						}
+						
+					}
+					
+				} // datajson close length
+				
+			} // jsonvalid check
+			
+		} // ajax success close
+		
+	}); // ajax close
+	
+	
+}
+
+//for leadconvert MergeTail....end...
+
+
+
+
 $(document).ready(function() {
 	
 //	$('#list').prop('disabled', 'disabled'); // extra
+	
+	getSkui();
 	
 	var selection =$('#stepUlSelect').val();
 	 $('.right-step-part ul').css('display','none');
@@ -538,8 +607,82 @@ function excelFileUpload(){
 
 //............dashboard code here.............................
 
+var templateName;
+var typeDataSource;
+var templateLibrary;
+var datasource;
+var object;
+var esignature;
+var twofactor;
+var esigntype;
+
+var dynamicDataSourceMainJson = {};
+
+
+var mailTemplateValue;
+$("body").on("change", "#multipleGetDropdowngetValue", function(){
+	 mailTemplateValue = $("option:selected", this).text();
+	 console.log("mailTemplateValue: "+mailTemplateValue);
+
+	 if(skutypeOutside=="doctiger601"){
+		 
+		 checktemplateAndSourceForPreviewMailTailMerge();
+		 
+		 var textSelectDocumentName = document.getElementById("multipleGetDropdowngetValue");
+		 
+		 templateName="";
+		 
+		 templateLibrary=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].value;
+		 console.log("templateLibrary_mail: "+templateLibrary);
+		 
+		 datasource=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("datasource");
+		 console.log("datasource_mail: "+datasource);
+		 
+		 object=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("object");
+		 console.log("object_mail: "+object);
+		 
+		 esignature=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("esignature");
+		 console.log("esignature: "+esignature);
+
+		 twofactor=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("twofactor");
+		 console.log("twofactor: "+twofactor);
+		 
+		 esigntype=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("esigntype");
+		 console.log("esigntype: "+esigntype);		 
+		 
+	  if(datasource=="ws"){
+		  document.getElementById("pkObject").innerHTML = object;
+		 $('.displaydatasource').css('display','none');
+		 $('.displaydatasourcews').css('display','block');
+
+	  }else{
+		  $('.displaydatasource').css('display','block');
+			 $('.displaydatasourcews').css('display','none');
+	  }
+	  
+	  document.getElementById("documentUrlGenerateId").innerHTML = "";
+	  
+	  ResetClickTemplateName();
+		 
+		 
+		 
+	 }
+	 
+	});
+
+
 var templateName1;
 function setSelectDocumentData(){	
+
+
+console.log("insideupper: "+skutypeOutside);
+if(skutypeOutside=="doctiger601"){
+		console.log("insideif: "+skutypeOutside);
+		$('.mailSimpleRemove').remove();
+		setDynamicMultipleDropdownListMailMergeTail("simpleTemplate");
+		checktemplateAndSourceForPreviewMailTailMerge();
+	
+}else{
 
 	$.ajax({
 
@@ -560,6 +703,11 @@ function setSelectDocumentData(){
 				var templatetype="";
 				var datasource="";
 				var object="";
+				var esignature ="";
+				var twoFactor ="";
+				var esigntype ="";
+				
+
 
 
 				if (jsonStr.Templates[i].hasOwnProperty("templatename")) {
@@ -568,17 +716,20 @@ function setSelectDocumentData(){
 					templatetype=jsonStr.Templates[i].templatetype;
 					datasource=jsonStr.Templates[i].datasource;
 					object=jsonStr.Templates[i].object;
-
+					 esignature =jsonStr.Templates[i].esignature;
+					 twoFactor =jsonStr.Templates[i].twoFactor;
+					 esigntype =jsonStr.Templates[i].esigntype;
 
 					
 					if(i==0){
-						setSelectDocumentData=setSelectDocumentData+'<option>Select Document</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						setSelectDocumentData=setSelectDocumentData+'<option>Select Document</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
 					}else{
-						setSelectDocumentData=setSelectDocumentData+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						setSelectDocumentData=setSelectDocumentData+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
 					}
 						
-			            document.getElementById("setSelectDocumentData").innerHTML = setSelectDocumentData;
-			         
+			            //document.getElementById("setSelectDocumentData").innerHTML = setSelectDocumentData;
+			         document.getElementById("simpleTemplate").innerHTML ='<label>Select Document</label><select class="form-control" id="setSelectDocumentData" class="setSelectDocumentData" onclick="getTemplateName();">'+ setSelectDocumentData +'</select>';
+					 
 			            var textSelectDocumentName = document.getElementById("setSelectDocumentData");
 			       	         templateName1=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].text;
 			       	        console.log("templateNameOnload: "+templateName1);
@@ -593,7 +744,7 @@ function setSelectDocumentData(){
 		} // sucees 
 
 	}); // function on click
-	
+}// else close
 }
 
 
@@ -609,14 +760,132 @@ $("#multipleGetDropdowngetValue") .change(function () {
 	
 });*/
 
-var mailTemplateValue;
-$("body").on("change", "#multipleGetDropdowngetValue", function(){
-	 mailTemplateValue = $("option:selected", this).text();
-	 console.log("mailTemplateValue: "+mailTemplateValue);
 
-	});
+
+
+
+function getTemplateName(){
+	
+	var textSelectDocumentName = document.getElementById("setSelectDocumentData");
+	 templateName=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].text;
+	 console.log("templateNameinside: "+templateName);
+	 
+	 templateLibrary=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].value;
+	 console.log("templateLibrary: "+templateLibrary);
+	 
+	 datasource=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("datasource");
+	 console.log("datasource: "+datasource);
+	 
+	 object=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("object");
+	 console.log("object: "+object);
+	 
+	 esignature=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("esignature");
+	 console.log("esignature: "+esignature);
+
+	 twofactor=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("twofactor");
+	 console.log("twofactor: "+twofactor);
+	 
+	 esigntype=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("esigntype");
+	 console.log("esigntype: "+esigntype);
+
+	 
+	 checktemplateAndSourceForPreview();
+	 
+  if(datasource=="ws"){
+	  document.getElementById("pkObject").innerHTML = object;
+	 $('.displaydatasource').css('display','none');
+	 $('.displaydatasourcews').css('display','block');
+	 $('.displaydatasourcewbservicesave').css('display','none');
+
+  }else if(datasource=="websericesave"){
+	  $('.displaydatasource').css('display','none');
+		 $('.displaydatasourcews').css('display','none');
+		 $('.displaydatasourcewbservicesave').css('display','block');
+
+  }else{
+	  $('.displaydatasource').css('display','block');
+		 $('.displaydatasourcews').css('display','none');
+		 $('.displaydatasourcewbservicesave').css('display','none');
+
+  }
+  
+  
+  
+  document.getElementById("documentUrlGenerateId").innerHTML = "";
+  
+  ResetClickTemplateName(); 
+
+}
+
+
 
 function setDynamicMultipleDropdownList(){	
+
+	$.ajax({
+
+		url : '/portal/servlet/service/GetMailDTATemplateListSKU1?email='+Email+'&group='+group+'&templateName='+templateName+'&templatetype='+templateLibrary,
+		type : 'GET',
+		async:false,
+		success : function(data) {
+			console.log("setDynamicMultipleDropdownList " +data);
+			var jsonStr = data;
+			jsonStr = JSON.parse(jsonStr);
+			var multipleGetDropdownList='';
+			
+			if(jsonStr.MailTemplates.length>0){
+				
+			for (var i = 0; i < jsonStr.MailTemplates.length; i++) {
+				
+				var templatename="";
+				var templatetype="";
+				var datasource="";
+				var object="";
+				
+				var esignature ="";
+				var twoFactor ="";
+				var esigntype ="";
+				
+				if (jsonStr.MailTemplates[i].hasOwnProperty("templatename")) {
+					
+					templatename=jsonStr.MailTemplates[i].templatename;
+					templatetype=jsonStr.MailTemplates[i].templatetype;
+					datasource=jsonStr.MailTemplates[i].datasource;
+					object=jsonStr.MailTemplates[i].object;
+					
+					 esignature =jsonStr.MailTemplates[i].esignature;
+					 twoFactor =jsonStr.MailTemplates[i].twoFactor;
+					 esigntype =jsonStr.MailTemplates[i].esigntype;
+					
+					if(i==0){
+						//multipleGetDropdownList=multipleGetDropdownList+'<option>Select Mail Template</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						multipleGetDropdownList=multipleGetDropdownList+'<option>Select Mail Template</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
+					}else{
+//						multipleGetDropdownList=multipleGetDropdownList+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						multipleGetDropdownList=multipleGetDropdownList+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
+					}
+					
+					
+				}
+				
+				
+				//	multipleGetDropdownList=multipleGetDropdownList+'<option value='+jsonStr.MailTemplates[i]+'>'+jsonStr.MailTemplates[i]+'</option>';
+				
+			} // for close
+			document.getElementById("multipleGetDropdownList").innerHTML = '<label>Select Mail Template</label><select class="form-control" id="multipleGetDropdowngetValue">' + multipleGetDropdownList + '</select>';
+			
+			 mailTemplateValue = $('#multipleGetDropdowngetValue').val();
+//			 mailTemplateValue = $("#multipleGetDropdowngetValue", this).text();
+			 console.log("mailTemplateValue inside: "+mailTemplateValue);
+			
+			}
+			
+		} // sucees 
+
+	}); // function on click
+	
+}
+
+function setDynamicMultipleDropdownListMailMergeTail(passMailId){	
 
 	$.ajax({
 
@@ -633,10 +902,45 @@ function setDynamicMultipleDropdownList(){
 				
 			for (var i = 0; i < jsonStr.MailTemplates.length; i++) {
 				
+				var templatename="";
+				var templatetype="";
+				var datasource="";
+				var object="";
+				
+				var esignature ="";
+				var twoFactor ="";
+				var esigntype ="";
+				
+				if (jsonStr.MailTemplates[i].hasOwnProperty("templatename")) {
+					
+					templatename=jsonStr.MailTemplates[i].templatename;
+					templatetype=jsonStr.MailTemplates[i].templatetype;
+					datasource=jsonStr.MailTemplates[i].datasource;
+					object=jsonStr.MailTemplates[i].object;
+					
+					 esignature =jsonStr.MailTemplates[i].esignature;
+					 twoFactor =jsonStr.MailTemplates[i].twoFactor;
+					 esigntype =jsonStr.MailTemplates[i].esigntype;
+					
+					if(i==0){
+						//multipleGetDropdownList=multipleGetDropdownList+'<option>Select Mail Template</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						multipleGetDropdownList=multipleGetDropdownList+'<option>Select Mail Template</option><option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
+					}else{
+//						multipleGetDropdownList=multipleGetDropdownList+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'">'+templatename+'</option>';
+						multipleGetDropdownList=multipleGetDropdownList+'<option datasource="'+datasource+'" object="'+object+'" value="'+templatetype+'" esignature="'+esignature+'" twoFactor="'+twoFactor+'" esigntype="'+esigntype+'">'+templatename+'</option>';
+					}
+					
+					
+				}
+				
+				/*if(i==0){
+					multipleGetDropdownList=multipleGetDropdownList+'<option>Select Mail Template</option><option value='+jsonStr.MailTemplates[i]+'>'+jsonStr.MailTemplates[i]+'</option>';
+				}else{
 					multipleGetDropdownList=multipleGetDropdownList+'<option value='+jsonStr.MailTemplates[i]+'>'+jsonStr.MailTemplates[i]+'</option>';
+				}*/
 				
 			} // for close
-			document.getElementById("multipleGetDropdownList").innerHTML = '<select class="form-control" id="multipleGetDropdowngetValue">' + multipleGetDropdownList + '</select>';
+			document.getElementById(passMailId).innerHTML = '<label>Select Mail Template</label><select class="form-control" id="multipleGetDropdowngetValue">' + multipleGetDropdownList + '</select>';
 			
 			 mailTemplateValue = $('#multipleGetDropdowngetValue').val();
 //			 mailTemplateValue = $("#multipleGetDropdowngetValue", this).text();
@@ -649,8 +953,6 @@ function setDynamicMultipleDropdownList(){
 	}); // function on click
 	
 }
-
-
 
 //........end mailtemplate here.........................
 
@@ -694,53 +996,28 @@ $( "#example2" ) .change(function () {
 });
 
 
-var templateName;
-var typeDataSource;
-var templateLibrary;
-var datasource;
-var object;
-var dynamicDataSourceMainJson = {};
-
-function getTemplateName(){
-	
-	var textSelectDocumentName = document.getElementById("setSelectDocumentData");
-	 templateName=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].text;
-	 console.log("templateNameinside: "+templateName);
-	 
-	 templateLibrary=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].value;
-	 console.log("templateLibrary: "+templateLibrary);
-	 
-	 datasource=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("datasource");
-	 console.log("datasource: "+datasource);
-	 
-	 object=textSelectDocumentName.options[textSelectDocumentName.selectedIndex].getAttribute("object");
-	 console.log("object: "+object);
-	 
-	 checktemplateAndSourceForPreview();
-	 
-  if(datasource=="ws"){
-	  document.getElementById("pkObject").innerHTML = object;
-	 $('.displaydatasource').css('display','none');
-	 $('.displaydatasourcews').css('display','block');
-
-  }else{
-	  $('.displaydatasource').css('display','block');
-		 $('.displaydatasourcews').css('display','none');
-  }
-  
-  document.getElementById("documentUrlGenerateId").innerHTML = "";
-  
-  ResetClickTemplateName(); 
-
-}
 
 
 
 function showDataSource(){
 	
-	var contactsUrl='/portal/servlet/service/getContactOrFields.contacts?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
-	var uploadExcelUrl='/portal/servlet/service/getContactOrFields.uploadexcel?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
-	var enterManuallyUrl='/portal/servlet/service/getContactOrFields.entermanually?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
+	var contactsUrl="";
+	var uploadExcelUrl="";
+	var enterManuallyUrl="";
+	
+	if(skutypeOutside=="doctiger601"){
+		
+		 contactsUrl='/portal/servlet/service/LeadAutoConvertMailTailApiDashBoard.contacts?email='+Email+'&group='+group+'&mailtemplatename='+mailTemplateValue
+		 uploadExcelUrl='/portal/servlet/service/LeadAutoConvertMailTailApiDashBoard.uploadexcel?email='+Email+'&group='+group+'&mailtemplatename='+mailTemplateValue
+		 enterManuallyUrl='/portal/servlet/service/LeadAutoConvertMailTailApiDashBoard.entermanually?email='+Email+'&group='+group+'&mailtemplatename='+mailTemplateValue
+		
+	}else{
+		
+		 contactsUrl='/portal/servlet/service/getContactOrFields.contacts?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
+		 uploadExcelUrl='/portal/servlet/service/getContactOrFields.uploadexcel?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
+		 enterManuallyUrl='/portal/servlet/service/getContactOrFields.entermanually?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary;
+		
+	}
 	
 	 typeDataSource = document.getElementById("list");
 	typeDataSource=typeDataSource.options[typeDataSource.selectedIndex].text;
@@ -817,6 +1094,15 @@ function excelDataSourceFileUpload(){
 					
 					    var successMsg = "File SuccessFully Uploaded!"
 						document.getElementById("successDataSourceUploadContact").innerHTML = successMsg
+						
+					
+						if(dynamicDataSourceMainJson.hasOwnProperty("data")){
+							var tempdata=dynamicDataSourceMainJson.data;
+							if(tempdata.length>0){
+								 setsignatorylistAutomatic(tempdata[0]);
+							}
+						}
+						//$("#signatory_list_modal").modal('show');	
 					
 				}
 
@@ -885,7 +1171,40 @@ function  callFunctionEnterManuallyDataSourceFetchData(UrlLink){
 }
 
 
+function  callFunctionwebsericesaveinputFetchData(){	
+console.log('/portal/servlet/service/getContactOrFields.webservicesaveform?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary);
+	$.ajax({
+
+		url : '/portal/servlet/service/getContactOrFields.webservicesaveform?email='+Email+'&group='+group+'&templatename='+templateName+'&templatetype='+templateLibrary,
+		type : 'GET',
+		async:false,
+		success : function(data) {  
+			console.log("inputfields " +data);
+			var jsonStr = data;
+			jsonStr = JSON.parse(jsonStr);
+			var multipleGetDropdownList='';
+			
+			if(jsonStr.inputfields.length>0){
+				
+			for (var i = 0; i < jsonStr.inputfields.length; i++) {
+				
+					multipleGetDropdownList=multipleGetDropdownList+'<div class="form-group"><label class="keynamewssave">'+jsonStr.inputfields[i]+'</label><input type="text" name="" class="form-control keyvaluewssave"></div>';
+				
+			} // for close
+			/*document.getElementById("enterManuallyId").innerHTML = '<div class="form-group"><input type="text" name="" class="form-control" placeholder="Enter value" disabled="disabled"></div>' + multipleGetDropdownList;*/
+			document.getElementById("webservicesaveinputid").innerHTML =  multipleGetDropdownList;			
+			}
+			
+//			checktemplateAndSourceForPreview();
+		} // sucees 
+
+	}); // function on click
+	
+}
+
+
 function getDataSourceFormDataDynamic(){	
+	
 	
 	var keyname = document.getElementsByClassName("keyname");
 	var keyvalue = document.getElementsByClassName("keyvalue");
@@ -916,11 +1235,72 @@ function getDataSourceFormDataDynamic(){
 	
 	var json = JSON.stringify(dynamicDataSourceMainJson);
 	console.log("jsonInside: "+json);
-	
-	
+	 setsignatorylistAutomatic(dynamicDataSourceFormData);
 	
 }
 
+function getDataSourceFormDataDynamicwebsericeSave(){	
+	try{
+	var keyname = document.getElementsByClassName("keynamewssave");
+	var keyvalue = document.getElementsByClassName("keyvaluewssave");
+
+	var data = [];
+	var dynamicDataSourceFormData = {};
+	
+	for (var i = 0; i < keyname.length; i++) {
+		var keynameData=keyname[i].innerHTML;
+		var keyvalueData=keyvalue[i].value;
+		console.log("keynameData: "+keynameData+" keyvalueData: "+keyvalueData);
+		dynamicDataSourceFormData[keynameData]=keyvalueData;
+	} // for close
+	var inputjson = JSON.stringify(dynamicDataSourceFormData);
+	console.log("jsonInside: "+inputjson);
+
+	//call ajax to et O/p json and put that json in in data and data in dynamicDataSourceMainJson
+	//data.push(dynamicDataSourceFormData);
+	//dynamicDataSourceMainJson.data = data;
+	var sendjson={};
+	sendjson["email"]=Email;
+	sendjson["group"]=group;
+	sendjson["templatename"]=templateName;
+	sendjson["templatetype"]=templateLibrary;
+	sendjson["input"]=dynamicDataSourceFormData;
+	console.log("sendjson: "+JSON.stringify(sendjson));
+
+	$.ajax({
+		url : '/portal/servlet/service/getContactOrFields.webservicesaveformoutput',
+		type : 'POST',
+		data:JSON.stringify(sendjson),
+		contentType:"application/json",
+
+		async:false,
+		success : function(resp) {  
+			console.log("resp " +resp);
+			var jsonobj = JSON.parse(resp);
+			console.log("jsonobj: "+jsonobj);
+
+			if (jsonobj.hasOwnProperty("output")) {
+				data.push(jsonobj.output)
+			console.log("data "+JSON.stringify(data))
+
+			}
+			}
+	//console.log(" dynamicDataSourceMainJson "+dynamicDataSourceMainJson);
+	//console.log("jsonInside: "+JSON.stringify(dynamicDataSourceMainJson));
+	
+	});
+	dynamicDataSourceMainJson["data"] = data;
+	
+	var json = JSON.stringify(dynamicDataSourceMainJson);
+	console.log("jsonInside: "+json);
+	
+	if(data.length>0){
+	 setsignatorylistAutomatic(data[0]);
+	}
+  }catch(err){
+	console.log(err);
+}
+}
 
 var dataTableCount = 0;
 function callFunctionDataSourceFetchData(urlLink){	
@@ -1142,10 +1522,13 @@ function getDataTableSelectedData(){
 	    console.log("row_value rowdata: " + rowdata);
 	    console.log("row_value: " + JSON.stringify(rowdata));
 	    data.push(rowdata);
+
 	});
 	dynamicDataSourceMainJson.data = data;
 	console.log("getDataTableSelectedData dynamicDataSourceMainJson : " + JSON.stringify(dynamicDataSourceMainJson));
-	
+if(data.length>0){
+	setsignatorylistAutomatic(data[0]);
+}
 	
 }
 
@@ -1157,7 +1540,18 @@ function DocumentGeneration(){
 	
  if(datasource!="ws"){
 		 
+	var checktemplEmail="";
+	 
 	if( !isEmpty(templateName) && !isEmpty(Email) ){
+		
+		checktemplEmail="true";
+	}else{
+		if( !isEmpty(mailTemplateValue) && !isEmpty(Email) ){
+			checktemplEmail="true";
+		}
+	}
+	
+	if( checktemplEmail=="true" ){
 	
 //if(resetDocumentData==0){
 		
@@ -1176,6 +1570,10 @@ function DocumentGeneration(){
 	dynamicDataSourceMainJson.templateName=templateName; 
 	dynamicDataSourceMainJson.typeDataSource=typeDataSource;
 	dynamicDataSourceMainJson.AttachtempalteType=templateLibrary;
+	dynamicDataSourceMainJson.esignature=esignature;
+	dynamicDataSourceMainJson.twofactor=twofactor;
+	dynamicDataSourceMainJson.esigntype=esigntype;
+
 	dynamicDataSourceMainJson.Email=Email;
 	dynamicDataSourceMainJson.group=group;
 	dynamicDataSourceMainJson.multipeDropDown=col;
@@ -1221,8 +1619,14 @@ function DocumentGeneration(){
  	    	   
  	       } // for close
             
-            if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
-            	 document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+            if(skutypeOutside=="doctiger601"){
+            	 if( !isEmpty(col) && !isEmpty(mailTemplateValue) && mailTemplateValue!="Select Document" ){
+                	 document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+                }
+            }else{
+            	 if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
+                	 document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+                }
             }
             
            
@@ -1240,7 +1644,11 @@ function DocumentGeneration(){
 }*/
 	}// 
 	else{
-		document.getElementById("documentUrlGenerateId").innerHTML = '<h6 style="color:#FF001B;">Please Select TemplateName</h6>';
+		if(skutypeOutside=="doctiger601"){
+			document.getElementById("documentUrlGenerateId").innerHTML = '<h6 style="color:#FF001B;">Please Select Mail Template</h6>';
+	    }else{
+	    	document.getElementById("documentUrlGenerateId").innerHTML = '<h6 style="color:#FF001B;">Please Select TemplateName</h6>';
+	    }
 	}
 	
 }// ws check
@@ -1275,6 +1683,10 @@ function DocumentGeneration(){
 			        dynamicDataSourceMainJson.templateName=templateName;  
 			    	dynamicDataSourceMainJson.typeDataSource=typeDataSource;
 			    	dynamicDataSourceMainJson.AttachtempalteType=templateLibrary;
+			    	dynamicDataSourceMainJson.esignature=esignature;
+					dynamicDataSourceMainJson.twofactor=twofactor;
+					dynamicDataSourceMainJson.esigntype=esigntype;
+
 			    	dynamicDataSourceMainJson.Email=Email;
 			    	dynamicDataSourceMainJson.group=group;
 			    	dynamicDataSourceMainJson.multipeDropDown=[];
@@ -1323,8 +1735,14 @@ function DocumentGeneration(){
 			     	    	   
 			     	       } // for close
 			                
-			                if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
-			               	     document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+			               if(skutypeOutside=="doctiger601"){
+			               	 if( !isEmpty(col) && !isEmpty(mailTemplateValue) && mailTemplateValue!="Select Document" ){
+			                   	 document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+			                   }
+			               }else{
+			               	 if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
+			                   	 document.getElementById("documentUrlGenerateId").innerHTML = allMultipleLink;
+			                   }
 			               }
 			                
 			                }// len check
@@ -1350,8 +1768,7 @@ function DocumentGeneration(){
 }
 
 function Reset() {
-    var selectDocument = document.getElementById("setSelectDocumentData");
-    selectDocument.selectedIndex = 0;
+    
     
     var listDataSource = document.getElementById("list");
     listDataSource.selectedIndex = 0;
@@ -1359,7 +1776,16 @@ function Reset() {
     var deliveryOption = document.getElementById("example2");
     deliveryOption.selectedIndex = 0;
     
-    $('#multipleGetDropdownList').hide();
+   if(skutypeOutside=="doctiger601"){
+	var selectDocument = document.getElementById("multipleGetDropdowngetValue");
+    selectDocument.selectedIndex = 0;
+    
+    }else{
+    	$('#multipleGetDropdownList').hide();
+    	
+    	  var selectDocument = document.getElementById("setSelectDocumentData");
+    	    selectDocument.selectedIndex = 0;
+    }
     
     $('option', $('#example2')).each(function(element) {
         $(this).removeAttr('selected').prop('selected', false);
@@ -1392,7 +1818,11 @@ function ResetClickTemplateName() {
     var deliveryOption = document.getElementById("example2");
     deliveryOption.selectedIndex = 0;
     
-    $('#multipleGetDropdownList').hide();
+  if(skutypeOutside=="doctiger601"){
+    	
+    }else{
+    	$('#multipleGetDropdownList').hide();
+    }
     
     $('option', $('#example2')).each(function(element) {
         $(this).removeAttr('selected').prop('selected', false);
@@ -1418,13 +1848,28 @@ var previewDocumentData=0;
 function DocumentPreviewpdf(){
 	
 	 if(datasource!="ws"){
-	if( !isEmpty(templateName) && !isEmpty(Email) ){
+	 var checktemplEmail="";
+		 
+			if( !isEmpty(templateName) && !isEmpty(Email) ){
+				
+				checktemplEmail="true";
+			}else{
+				if( !isEmpty(mailTemplateValue) && !isEmpty(Email) ){
+					checktemplEmail="true";
+				}
+			}
+			
+			if( checktemplEmail=="true" ){
 	
 	
 //	if(previewDocumentData==0){
 		dynamicDataSourceMainJson.templateName=templateName;  
 		dynamicDataSourceMainJson.typeDataSource=typeDataSource;
 		dynamicDataSourceMainJson.AttachtempalteType=templateLibrary;
+		dynamicDataSourceMainJson.esignature=esignature;
+		dynamicDataSourceMainJson.twofactor=twofactor;
+		dynamicDataSourceMainJson.esigntype=esigntype;
+
 		dynamicDataSourceMainJson.Email=Email;
 		dynamicDataSourceMainJson.group=group;
 		dynamicDataSourceMainJson.multipeDropDown=col;
@@ -1464,6 +1909,20 @@ function DocumentPreviewpdf(){
 	    		   /* var s=documentlink.lastIndexOf("/");
 	    		    var pdfFileName = documentlink.substring(s+1);*/
 	    		    
+	    		    if(skutypeOutside=="doctiger601"){
+	    		    	
+	    		    	if( !isEmpty(col) && !isEmpty(mailTemplateValue) && mailTemplateValue!="Select Document" ){
+	    	    		    document.getElementById("pdfFileName").innerHTML = pdfFileName;
+	    	    		    
+	    	    		   var el = document.getElementById('iframeId');
+	    	   	               el.src = documentlink; // assign url to src property
+	    	   	            if(i==0){
+	    	 	    		    break;
+	    	 	    		    }
+	    	    		    }// col check
+	    		    	
+	    		    }else{
+	    		    
 	    		    if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
 	    		    document.getElementById("pdfFileName").innerHTML = pdfFileName;
 	    		    
@@ -1473,6 +1932,8 @@ function DocumentPreviewpdf(){
 	 	    		    break;
 	 	    		    }
 	    		    }// col check
+	    		    
+	    	   }// else merge 
 	    	   } // close here check documentlink
 	    	   
 	       } // for close
@@ -1529,6 +1990,10 @@ function DocumentPreviewpdf(){
 				        dynamicDataSourceMainJson.templateName=templateName;  
 				    	dynamicDataSourceMainJson.typeDataSource=typeDataSource;
 				    	dynamicDataSourceMainJson.AttachtempalteType=templateLibrary;
+				    	dynamicDataSourceMainJson.esignature=esignature;
+						dynamicDataSourceMainJson.twofactor=twofactor;
+						dynamicDataSourceMainJson.esigntype=esigntype;
+
 				    	dynamicDataSourceMainJson.Email=Email;
 				    	dynamicDataSourceMainJson.group=group;
 				    	dynamicDataSourceMainJson.multipeDropDown=[];
@@ -1568,17 +2033,31 @@ function DocumentPreviewpdf(){
 				 	    		   /* var s=documentlink.lastIndexOf("/");
 				 	    		    var pdfFileName = documentlink.substring(s+1);*/
 				 	    		    
-				 	    		   if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
-				 	             
-				 	    		   document.getElementById("pdfFileName").innerHTML = pdfFileName;
-					    		    
-					    		   var el = document.getElementById('iframeId');
-					   	               el.src = documentlink; // assign url to src property
-				 	    		    if(i==0){
-				 	    		    break;
-				 	    		    }
-				 	    		    
-				 	    		   }// col check
+				 	    		   if(skutypeOutside=="doctiger601"){
+	    		    	
+	    		    	if( !isEmpty(col) && !isEmpty(mailTemplateValue) && mailTemplateValue!="Select Document" ){
+	    	    		    document.getElementById("pdfFileName").innerHTML = pdfFileName;
+	    	    		    
+	    	    		   var el = document.getElementById('iframeId');
+	    	   	               el.src = documentlink; // assign url to src property
+	    	   	            if(i==0){
+	    	 	    		    break;
+	    	 	    		    }
+	    	    		    }// col check
+	    		    	
+	    		    }else{
+	    		    
+	    		    if( !isEmpty(col) && !isEmpty(templateName) && templateName!="Select Document" ){
+	    		    document.getElementById("pdfFileName").innerHTML = pdfFileName;
+	    		    
+	    		   var el = document.getElementById('iframeId');
+	   	               el.src = documentlink; // assign url to src property
+	   	            if(i==0){
+	 	    		    break;
+	 	    		    }
+	    		    }// col check
+	    		    
+	    	   }// else merge 
 				 	    		    
 				 	    	   } // close here check documentlink
 				 	    	   
@@ -1633,6 +2112,31 @@ function checktemplateAndSourceForPreview(){
 	
 }
 
+function checktemplateAndSourceForPreviewMailTailMerge(){
+	
+	console.log("variablecheck: "+"mailTemplateValue: "+mailTemplateValue+"mailTemplateValue: "+mailTemplateValue);
+	if( !isEmpty(mailTemplateValue) & mailTemplateValue!="Select Mail Template"){
+		
+		console.log("if true");
+		// show modalClass
+//		 $('.modalClass').show();
+//		$('.modalClass').attr('disabled',true);
+		//alert("true");
+		document.getElementById("previewBtn").disabled = false;
+		document.getElementById("list").disabled = false;
+		
+	}else{
+		console.log("else true");
+		// not show
+//		 $('.modalClass').hide();
+//		$('.modalClass').attr('disabled',false);
+		//alert("false");
+		document.getElementById("previewBtn").disabled = true;
+		document.getElementById("list").disabled = true;
+	}
+	
+}
+
 /*$("#trigger").click(function(){
     $("#dialog").dialog();
   });*/ 
@@ -1652,7 +2156,9 @@ function checktemplateAndSourceForPreview(){
 function getIdSelectdeliveryOption(){	
 
 	console.log("inside_getIdSelectdeliveryOption : ");
-	
+	if(skutypeOutside=="doctiger601"){
+		
+	}else{
 	var values = $('#example2').val();
 	console.log("deliveryOption_getIdSelectdeliveryOption: "+values);
 	
@@ -1686,7 +2192,7 @@ function getIdSelectdeliveryOption(){
 	}else{
 		 $('#multipleGetDropdownList').hide();
 	}
-	
+	}// else close
 }
 
 
@@ -3046,7 +3552,7 @@ $('.options1').click(function(){
 		
 		var json = JSON.stringify(dynamicDataSourceMainJsonWelcome);
 		console.log("dynamicDataSourceMainJsonWelcome: "+json);
-		
+
 	}
   
   function DocumentGenerationWelcomePage(){
@@ -4107,3 +4613,95 @@ function Outlook_url_login() {
 
 
 //.........................................................settings tab close
+
+$('#form-add').on('click',function () {
+	  var subDivMain = $('.sub-div-main').html();
+	  var count = $('#signatory_list_modal .remove-sub-div').length;
+	  if(count <= '4'){
+	    $('.add-sub-div').append(subDivMain);
+	  }
+	});
+
+	$(document).on("click", ".form-remove", function() {
+	  var dd = $(this).parents('.remove-sub-div').remove();
+	  console.log(dd);
+	});
+
+
+
+function savesignatorylist(){
+	var signer_emailall = document.getElementsByName("signer_email");
+	var Access_Codeall = document.getElementsByName("Access_Code");
+	
+	
+	var data = [];
+	
+	
+	for (var i = 0; i < signer_emailall.length-1; i++) {
+		var signeraccesslist = {};
+
+		var signer_email=signer_emailall[i].value;
+		console.log("signer_email: "+signer_email);
+		var Access_Code=Access_Codeall[i].value;
+		console.log("Access_Code: "+Access_Code);
+		
+		signeraccesslist["signer_email"]=signer_email;
+		signeraccesslist["Access_Code"]=Access_Code;
+
+		data.push(signeraccesslist);
+	} // for close
+console.log(JSON.stringify(data));
+dynamicDataSourceMainJson.esigners_list = data;
+
+}
+
+function setsignatorylistAutomatic(dynamicDataSourceFormData){
+	console.log("esignature "+esignature +" twofactor "+twofactor +" esigntype "+esigntype);
+	if(esignature=="true"){
+	if(esigntype=="Manual"){
+		$("#signatory_list_modal").modal('show');
+
+	}else if(esigntype=="Automatic" ){
+		//allsignerlist fron data
+		var signer1="";
+		var signer2="";
+		var signer3="";
+		var signer4="";
+		var signer5="";
+		
+		if(dynamicDataSourceFormData.hasOwnProperty("signer1")){signer1=dynamicDataSourceFormData.signer1}
+		if(dynamicDataSourceFormData.hasOwnProperty("signer2")){signer2=dynamicDataSourceFormData.signer2}
+		if(dynamicDataSourceFormData.hasOwnProperty("signer3")){signer3=dynamicDataSourceFormData.signer3}
+		if(dynamicDataSourceFormData.hasOwnProperty("signer4")){signer4=dynamicDataSourceFormData.signer4}
+		if(dynamicDataSourceFormData.hasOwnProperty("signer5")){signer5=dynamicDataSourceFormData.signer5}
+var signerarr=[];
+signerarr.push(signer1);
+signerarr.push(signer2);
+signerarr.push(signer3);
+signerarr.push(signer4);
+signerarr.push(signer5);
+
+		
+		for(var i=0; i<4; i++){
+			  document.getElementById("form-add").click();
+		}
+		var signer_emailall = document.getElementsByName("signer_email");
+		var Access_Codeall = document.getElementsByName("Access_Code");
+		console.log("signer_emailall "+signer_emailall.length+"signer_emailall "+signer_emailall)		
+		if( twofactor=="true"){
+			for (var i = 0; i < signer_emailall.length; i++) {
+				signer_emailall[i].value=signerarr[i];
+				signer_emailall[i].setAttribute("disabled", "true");
+			}
+       }else if( twofactor=="false"){
+    	   for (var i = 0; i < signer_emailall.length; i++) {
+				signer_emailall[i].value=signerarr[i];
+				signer_emailall[i].setAttribute("disabled", "true");
+				Access_Codeall[i].setAttribute("disabled", "true");
+			}
+        }
+		$("#signatory_list_modal").modal('show');
+	}
+}
+}
+
