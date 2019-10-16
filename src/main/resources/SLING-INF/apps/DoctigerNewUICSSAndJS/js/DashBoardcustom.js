@@ -4019,7 +4019,8 @@ document.onreadystatechange = function () {
 		}else if (hrefFull1 == 'UIDoctiger#reports') {
 			getDocumentTrackingDataOnLoad();
 			 
-		}else{
+		}
+		else{
 			
 			if (state == 'interactive') {
 			       document.getElementById('welcomeHideId').style.visibility="hidden";
@@ -4328,7 +4329,19 @@ var OAUTHURLUSERINFO    =   'https://accounts.google.com/o/oauth2/auth?';
 var VALIDURLUSERINFO    =   'https://www.googleapis.com/oauth2/v1/tokeninfo?access_token=';
 var SCOPEUSERINFO       =   'https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/gmail.send';
 var CLIENTIDUSERINFO    =   '350043906139-infkug7o8lu33pvo0ak3l4accic1guqo.apps.googleusercontent.com';
-var REDIRECTUSERINFO    =   'https://bizlem.io:8083/portal/servlet/service/DoctigerCreation'
+//var REDIRECTUSERINFO    =   'https://bizlem.io:8083/portal/servlet/service/DoctigerCreation'
+
+var urlAuth=window.location.href;
+var REDIRECTUSERINFO ="";
+
+if( urlAuth.includes("https://bizlem.io:8083/portal/UIDoctiger") ){
+	 REDIRECTUSERINFO    =   'https://bizlem.io:8083/portal/UIDoctiger';
+}else{
+	if( urlAuth.includes("https://bizlem.io:8083/portal/servlet/service/DoctigerCreation") ){
+		 REDIRECTUSERINFO    =   'https://bizlem.io:8083/portal/servlet/service/DoctigerCreation';
+	}
+}
+
 var LOGOUTUSERINFO      =   'http://accounts.google.com/Logout';
 //var TYPEUSERINFO = 'token';
 
@@ -4394,24 +4407,26 @@ var loggedIn    =   false;
 
 function login() {
  var win         =   window.open(_urlUSERINFO, "windowname1", 'width=800, height=600'); 
+ //alert(win);
  var pollTimer   =   window.setInterval(function() { 
      try {
          if (win.document.URL.indexOf(REDIRECTUSERINFO) != -1) {
              window.clearInterval(pollTimer);
              var url =   win.document.URL;
-             console.log("urlWindow: "+url);
+           //  alert("urlWindow: "+url);
             // acToken = gup(url, 'access_token');
              // tokenType = gup(url, 'token_type');
              // expiresIn = gup(url, 'expires_in');
              
              var newcode= getcode(url, 'code');
              console.log("newcode:: "+newcode);
+            // alert("newcode: "+newcode);
             
             
              $.ajax({
 	           		type:'GET',
-	           		url:'/portal/getAuthCode?code='+newcode + '&email='+Email+'&group='+group,
-	           		async:true,
+	           		url:'/portal/getAuthCode?code='+newcode + '&email='+Email+'&group='+group+'&redirectUrl='+REDIRECTUSERINFO,
+	           		async:false,
 	           		success:function(data){
 	           			try{
 	           				console.log("successServlet: "+data);
@@ -4421,6 +4436,8 @@ function login() {
 	           			}
 	           		}
 	           	});
+             
+             win.close();
              
            // validateToken(acToken);
            
@@ -4444,7 +4461,7 @@ function login() {
 			 * }catch(err){ console.log("err: "+err); } } }); });
 			 */
             
-             win.close();
+//             win.close();
 //SaveCode();
              
             
@@ -4571,7 +4588,18 @@ var Outlook_CLIENTID    =    '4106b9c3-33cf-4886-b19a-e4ba5e7f9e17';
 //var Outlook_REDIRECT_URI = 'http://localhost:8080/Autoreply/'
 	// var Outlook_REDIRECT_URI =
 	// 'http://localhost:8085/ExcelCheckApi/index.jsp'
-var Outlook_REDIRECT_URI ='https://bizlem.io:8083/portal/servlet/service/DoctigerCreation'
+
+var urlAuthOutlook=window.location.href;
+var Outlook_REDIRECT_URI ="";
+
+if( urlAuthOutlook.includes("https://bizlem.io:8083/portal/UIDoctiger") ){
+	Outlook_REDIRECT_URI    =   'https://bizlem.io:8083/portal/UIDoctiger';
+}else{
+	if( urlAuthOutlook.includes("https://bizlem.io:8083/portal/servlet/service/DoctigerCreation") ){
+		Outlook_REDIRECT_URI    =   'https://bizlem.io:8083/portal/servlet/service/DoctigerCreation';
+	}
+}
+
 var Outlook_response_type=            'code';
 
 var Outlook_url   =   Outlook_OAUTHURL + 'scope=' + Outlook_SCOPE + '&client_id=' + Outlook_CLIENTID + '&redirect_uri=' + Outlook_REDIRECT_URI + '&response_type=' + Outlook_response_type;
@@ -4590,8 +4618,8 @@ function Outlook_url_login() {
             
             $.ajax({
 	           		type:'GET',
-	           		url:'/portal/getOutlookAuthCode?code='+newcode + '&email='+Email+'&group='+group,
-	           		async:true,
+	           		url:'/portal/getOutlookAuthCode?code='+newcode + '&email='+Email+'&group='+group+'&redirectUrl='+Outlook_REDIRECT_URI,
+	           		async:false,
 	           		success:function(data){
 	           			try{
 	           				console.log("outlook_successServlet: "+data);

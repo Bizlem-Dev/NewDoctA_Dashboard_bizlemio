@@ -1,0 +1,74 @@
+<section class="content dashboard" style="padding-top:20px;">
+      <div class="row">
+          <div class="col-md-12">
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Esignature Reminder</h3>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                
+                  <tr>
+                    <th>srno</th>
+                    <th>Document Name</th>
+                    <th>Date</th>
+                    <th colspan="3">Document Status</th>
+                  </tr>
+                  
+                  <tr>
+                  
+                    <td rowspan="4">1</td>
+                    <td rowspan="4">NDA.docx </td>
+                    <td rowspan="4">18-9019</td>
+                    
+                      <tr>
+                        <td>signatory</td>
+                        <td>Status</td>
+                        <td>Send reminder</td>
+                      </tr>
+                      
+                      <tr>
+                        <td>a@mail.com</td>
+                        <td>sent</td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Send</a></td>
+                      </tr>
+                      
+                      <tr>
+                        <td>b@mail.com</td>
+                        <td>Sent</td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Send</a></td>
+                      </tr>
+                    
+                  </tr>
+                  
+                 <!--  <tr>
+                    <td rowspan="4">2</td>
+                    <td rowspan="4">NDA.docx </td>
+                    <td rowspan="4">18-9019</td>
+                    
+                      <tr>
+                        <td>a@mail.com</td>
+                        <td>Sent</td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Send</a></td>
+                      </tr>
+                      <tr>
+                        <td>b@mail.com</td>
+                        <td>Sent</td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Send</a></td>
+                      </tr>
+                      <tr>
+                        <td>c@mail.com</td>
+                        <td>Sent</td>
+                        <td><a href="#" class="btn btn-primary btn-sm">Send</a></td>
+                      </tr>
+                       </tr> -->
+               
+                </table>
+                
+            </div>
+            
+            
+          </div>
+          </div>
+        </div>  
+    </section>

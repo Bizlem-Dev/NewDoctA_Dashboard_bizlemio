@@ -9,6 +9,7 @@ import javax.jcr.Property;
 import javax.jcr.PropertyIterator;
 import javax.jcr.Session;
 import javax.jcr.SimpleCredentials;
+import javax.jcr.Value;
 import javax.servlet.ServletException;
 import org.apache.felix.scr.annotations.Reference;
 import org.apache.felix.scr.annotations.sling.SlingServlet;
@@ -113,7 +114,22 @@ public class checkFolderGroupNewCode extends SlingAllMethodsServlet {
 													while(propertyIt.hasNext()){
 														 Property property=propertyIt.nextProperty();
 						    							  String propertyName=property.getName();
-						    							  String propertyValue=property.getValue().getString();
+
+                                                          String propertyValue="";
+						    							  
+						    							  JSONArray selectfieldArray=new JSONArray();
+						    							  if(property.isMultiple()){
+						    								  Value[] value = property.getValues();
+						    								  
+						    								  
+						    								  for(int i=0;i<value.length;i++){
+						    									  
+						    									 String data= value[i].getString();
+						    									 propertyValue= selectfieldArray.put(data).toString();
+						    								  } // for close
+						    							  }else{
+						    								   propertyValue=property.getValue().getString();
+						    							  }
 						    							  
 						    							  if("GenerationDate".equalsIgnoreCase(propertyName)){
 						    								  
@@ -188,7 +204,34 @@ public class checkFolderGroupNewCode extends SlingAllMethodsServlet {
 													while(propertyIt.hasNext()){
 														 Property property=propertyIt.nextProperty();
 						    							  String propertyName=property.getName();
-						    							  String propertyValue=property.getValue().getString();
+						    							  String propertyValue="";
+						    							  
+						    							  JSONArray selectfieldArray=new JSONArray();
+						    							  if(property.isMultiple()){
+						    								  Value[] value = property.getValues();
+						    								  
+						    								  
+						    								  for(int i=0;i<value.length;i++){
+						    									  
+						    									 String data= value[i].getString();
+						    									 propertyValue= selectfieldArray.put(data).toString();
+						    								  } // for close
+						    							  }else{
+						    								   propertyValue=property.getValue().getString();
+						    							  }
+						    							  
+						    							  
+                                                          if("GenerationDate".equalsIgnoreCase(propertyName)){
+						    								  
+						    								  if(propertyValue.lastIndexOf(".")!=-1){
+						    									  propertyValue=propertyValue.substring( 0,propertyValue.lastIndexOf(".") );
+						    								 
+						    									    /*LocalDateTime localDateTime = LocalDateTime.parse(propertyValue);
+						    										DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");  
+						    										propertyValue = localDateTime.format(formatter);*/
+						    								  
+						    								  }
+						    							  }
 						    							  
 						    							  if("jcr:primaryType".equalsIgnoreCase(propertyName)){
 						    								  

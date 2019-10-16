@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>DocTiger | Dashboard</title>
+
+<link href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/doctiger-fevicon.png" rel="icon">
+<link href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/doctiger-fevicon.png" rel="apple-touch-icon">
 <meta
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
 	name="viewport">
@@ -37,6 +40,27 @@
 	width: 30%;
 }
 </style>
+<style type="text/css">
+    .product-info a,
+    .col-item h5,
+    .right-step-part a{
+      font-size: 16px;
+    }
+    .right-step-part a{
+      width: calc(100% - 45px);
+      float: right;
+      margin-bottom: 5px;
+    }
+    .show-more{
+      display: none;
+    }
+  </style>
+<!-- <script>
+if(window.location.protocol.indexOf("https") == -1){
+window.location="https://bizlem.io:8083/portal/UIDoctiger";
+}
+</script>-->
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
 
@@ -218,14 +242,14 @@
 						</span>
 					</a>
 						<ul class="treeview-menu">
-							<li class="filesDataA"><a href="#filesData"
-								data-toggle="tab"><i class="fa fa-circle-o"></i>Files</a></li>
+							<!-- <li class="filesDataA"><a href="#filesData"
+								data-toggle="tab"><i class="fa fa-circle-o"></i>Files</a></li> -->
 							<!-- files.html -->
 							<li><a href="#folderData" data-toggle="tab"
 								onclick="folderCode();"><i class="fa fa-circle-o"></i>Folder</a></li>
 							<!-- folder.html -->
-							<li><a href="#trailData" data-toggle="tab"><i
-									class="fa fa-circle-o"></i>Trail</a></li>
+							<!-- <li><a href="#trailData" data-toggle="tab"><i
+									class="fa fa-circle-o"></i>Trail</a></li> -->
 							<!-- trail.html -->
 						</ul></li>
 
@@ -238,7 +262,9 @@
 
 					<!--Settings Tab Start here  -->
 
-					<li class="treeview" class="settingLiA"><a href="#Settingtab"
+<!-- Settingtab -->
+
+					<li class="treeview" class="settingLiA"><a href="#"    
 						data-toggle="tab"> <i class="fa fa-cog" aria-hidden="true"></i>
 							<span>Setting</span> <span class="pull-right-container"> <i
 								class="fa fa-angle-left pull-right"></i>
@@ -302,7 +328,7 @@
 
 					<!-- menu end here -->
 
-
+        <li class="esignatureRemindA"><a href="#esignature-reminder" data-toggle="tab"><i class="fa fa-circle-o" aria-hidden="true" ></i>Esignature Reminder</a></li>
 				</ul>
 			</section>
 		</aside>
@@ -459,6 +485,12 @@
 			</div>
 			<!--settings data Load End here  -->
 
+             <div id="esignature-reminder" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/esignature_reminde.esp");
+				%>
+			</div>
+
 			<div id="reports" class="content-wrapper tab-pane">
 				<%
 					load("/apps/DoctigerNewUICSSAndJS/common/report.esp");
@@ -548,9 +580,11 @@
 		if (hrefFull1 == 'UIDoctiger#documentmanagement') {
 			$('.treeviewA a').trigger('click');
 		}
-		if (hrefFull1 == 'UIDoctiger#Settingtab') {
-			$('.settingLiA a').trigger('click');
-		}
+		
+		//if (hrefFull1 == 'UIDoctiger#Settingtab') {
+			//$('.settingLiA a').trigger('click');
+		//}
+		
 		if (hrefFull1 == 'UIDoctiger#reports') {
 			$('.reportsA a').trigger('click');
 			 
@@ -560,6 +594,10 @@
 		if (hrefFull1 == 'UIDoctiger#Approvals') {
 			$('.approvalA a').trigger('click');
 		}
+		 if (hrefFull1 == 'UIDoctiger#esignature-reminder') {
+				$('.esignatureRemindA a').trigger('click');
+				 
+			}
 	</script>
 
 
@@ -738,6 +776,24 @@ $.ajax({
 						}
 					});
 		}
+		
+		
+		$('.show').click(function () {
+		      $('.show-more').toggle();
+
+		      if ($(this).text() == "Show More")
+		       $(this).text("Hide")
+		      else
+		       $(this).text("Show More")
+		    });
+		
+		
+		$('#sendQuote').click(function () {
+		      $('#sendQuoteDiv').css('display','block');
+		    });
+		    $('#viewRules').click(function () {
+		      $('#sendQuoteDiv').css('display','none');
+		    });
 	</script>
 </body>
 </html>
