@@ -1,0 +1,855 @@
+
+
+    <section class="content-header">
+      <div class="form-group" style="display: inline-block;">
+          <select class="form-control" style="width:200px;position: relative;top:20px;" id="fileListDrop" class="fileListDrop" onchange="getFieldData()">
+           <!--  <option>Name</option>
+            <option>option 2</option>
+            <option>option 3</option>
+            <option>option 4</option>
+            <option>option 5</option> -->
+          </select>
+      </div>
+      <div class="popup-btn">
+       <ul>
+       <li><a href="" type="button" data-toggle="modal" data-target="#modal-warning">Import</a></li>
+       <!-- <li><a href="#"><i class="fa fa-caret-down" aria-hidden="true"></i></a></li> -->
+       </ul>
+      </div>
+          <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+              <div class="modal-content">
+              <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>New Contact</h3>
+              <form action="" method="get">
+              <h4>Contact Information</h4>
+              <h5>Contact owner</h5>
+              <h6>Carrot Rule</h6>
+              <div class="contact-form">
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>First Name</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Last Name</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                 <div class="form-group">
+                <label>Company</label>
+                 <select class="brdr">
+            <option>...</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+        </select>
+        
+        <!--<div class="red box1">You have selected <strong>red option</strong> so i am here</div>
+    <div class="green box1">You have selected <strong>green option</strong> so i am here</div>
+    <div class="blue box1">You have selected <strong>blue option</strong> so i am here</div>-->
+                </div>
+                
+                
+
+                </div>
+                <div class="contact-form-right">
+                <div class="form-group">
+                <label>Phone</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Email</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Type</label>
+                 <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Employee</option>
+                    <option value="green">Lead</option>
+                    <option value="blue">Customer</option>
+                    <option value="blue">Account</option>
+                    <option value="blue">Other</option>
+                </select>
+                </div>
+                
+               
+                
+               
+                </div>
+                
+              </div>
+              
+              
+              <!--Lead open data-->
+              
+              <div class="contact-form red box1">
+              
+              <div class="con">
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>Title</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Lead Source</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>Lead Status</label>
+                 <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>Annual Revenue</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>No of employees</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                </div>
+                
+                
+                <div class="contact-form-right">
+                <div class="form-group">
+                <label>Fax</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Website</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Industry </label>
+                 <select class="brdr">
+                    <option>...</option>
+                     <option value="red">Demo</option>
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>Rating </label>
+                 <select class="brdr">
+                    <option>...</option>
+                     <option value="red">Demo</option>
+                </select>
+                </div>
+                </div>
+                </div>
+                
+                
+                <div class="con">
+                <h4>Address Information</h4>
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>Street</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                <label>City</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                <div class="form-group">
+                <label>State/Province</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Country</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                </div>
+                </div>
+                
+                
+                
+                <div class="con">
+                <h4>Additional Information</h4>
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>Product Interest</label>
+                <select class="brdr">
+                    <option>...</option>
+                     <option value="red">Demo</option>
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>SIC Code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Number of Locations</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                <div class="form-group">
+                <label>Current Generations</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Primary</label>
+                <select class="brdr">
+                    <option>...</option>
+                     <option value="red">Demo</option>
+                </select>
+                </div>
+                </div>
+                </div>
+                
+                
+                 <div class="con">
+                <h4>Descriptions</h4>
+                <div class="form-group">
+                <label>Description</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                </div>
+                
+              </div>
+              
+              <!--Lead open data-->
+              
+              <!--New contact open data-->
+                
+                <div class="contact-form green box1">
+              
+              <div class="con">
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>Account Name</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Title</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Department</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Birthday</label>
+                <div id="datepicker2" class="input-group date" data-date-format="mm-dd-yyyy">
+    <input class="form-control" type="text" readonly />
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+</div>
+                </div>
+                
+                <div class="form-group">
+                <label>Reports to</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Lead Source</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                </div>
+                
+                
+                <div class="contact-form-right">
+                 <div class="form-group">
+                <label>Mobile</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Other Phone</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Fax</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Email</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Assistant</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Asst. Phone</label>
+                <input name="" type="text" class="input-field">
+                </div>
+               
+                
+                
+                </div>
+                </div>
+                
+                
+                <div class="con">
+                <h4>Address Information</h4>
+                <div class="contact-form-left">
+                 <div class="form-group">
+                <label>Mailing Address</label>
+                </div>
+                
+               <div class="form-group">
+                <label>Mailing street</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                <label>Mailing city</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Mailing State/Province</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Mailing zip/postal code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Mailing country</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                 <div class="form-group">
+                <label>Other Address</label>
+                </div>
+                
+                <div class="form-group">
+                <label>Other street</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                <label>Other city</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Other State/Province</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Other zip/postal code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Other country</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                
+                </div>
+                </div>
+                
+                
+                
+                <div class="con">
+                <h4>Additional Information</h4>
+                <div class="contact-form-left">
+                              
+                
+                <div class="form-group">
+                <label>Languages</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                <div class="form-group">
+                <label>Level</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                </div>
+                </div>
+                
+                
+                 <div class="con">
+                <h4>Descriptions</h4>
+                <div class="form-group">
+                <label>Description</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                </div>
+                
+              </div>
+                
+              <!--New contact open data-->
+              
+              
+              <!--New Account open data-->
+              
+               <div class="contact-form blue box1">
+              
+              <div class="con">
+                <div class="contact-form-left">
+                <div class="form-group">
+                <label>Account Name</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Parent Account </label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Account number</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Account site</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Type</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>Industry</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Annual Revenue</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                 <div class="form-group">
+                <label>Phone</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Fax</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Website</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Ticker Symbol</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>Ownership</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                <div class="form-group">
+                <label>Employees</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                <div class="form-group">
+                <label>SIC code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+               
+                
+                
+                </div>
+                </div>
+                
+                
+                <div class="con">
+                <h4>Address Information</h4>
+                <div class="contact-form-left">
+                 <div class="form-group">
+                <label>Billing Address</label>
+                </div>
+                
+               <div class="form-group">
+                <label>Billing street</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                <label>Billing city</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Billing State/Province</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Billing zip/postal code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Billing country</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                 <div class="form-group">
+                <label>Shipping Address</label>
+                </div>
+                
+                <div class="form-group">
+                <label>Shipping street</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                
+                <div class="form-group">
+                <label>Shipping city</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Shipping State/Province</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Shipping zip/postal code</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Shipping country</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                
+                </div>
+                </div>
+                
+                
+                
+                <div class="con">
+                <h4>Additional Information</h4>
+                <div class="contact-form-left">
+                        
+               <div class="form-group">
+                <label>Customer Priority</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>SLA Expiration Date</label>
+                <input name="" type="text" class="input-field" data-provide="datepicker">
+                <!--<div class="input-group date" data-date-format="dd.mm.yyyy">
+            <input  type="text" class="form-control" placeholder="dd.mm.yyyy">
+            <div class="input-group-addon" >
+              <span class="glyphicon glyphicon-th"></span>
+            </div>
+          </div>-->
+          <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+    <input class="form-control" type="text" readonly />
+    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+</div>
+          
+                </div>
+                
+                <div class="form-group">
+                <label>Number of Locations</label>
+                <input name="" type="text" class="input-field" >
+                </div>
+                
+                
+                <div class="form-group">
+                <label>Active</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                </div>
+                
+                
+                <div class="contact-form-right">
+                
+                 <div class="form-group">
+                <label>SLA</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                <div class="form-group">
+                <label>SLA Serial Number</label>
+                <input name="" type="text" class="input-field">
+                </div>
+                
+                <div class="form-group">
+                <label>Upsell Opportunity</label>
+                <select class="brdr">
+                    <option>...</option>
+                    <option value="red">Demo</option>
+                    
+                </select>
+                </div>
+                
+                
+                
+                </div>
+                </div>
+                
+                
+                 <div class="con">
+                <h4>Descriptions</h4>
+                <div class="form-group">
+                <label>Description</label>
+                <textarea class="input-field" name="" cols="" rows=""></textarea>
+                </div>
+                </div>
+                
+              </div>
+              <!--New Account open data-->
+              
+              
+              
+              
+              
+              
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-new-btn">Save &amp; New</button>
+                <button type="button" class="btn save-btn">Save</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        
+        <div class="modal fade" id="modal-warning">
+          <div class="modal-dialog">
+            <div class="modal-content">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>Import</h3>
+              <form action="" method="get">
+              <div class="contact-form">
+                <div class="contact-form-left">
+                <div class="form-group">
+               <!--  <input name="" type="button" class="download-template-btn" value="Download Excel Template"> -->
+                </div>
+                </div>
+                <div class="contact-form-right">
+                <div class="form-group">
+               <div class="custom-file-upload">
+                <input type="file" id="fileUploadExcel" name="myfiles[]" class="test-xls" multiple />
+                <small class="color-dark" id="fileuloadImagename">File Name</small>
+                <p id="successUploadContact"></p>
+                 
+                 </div>
+                </div>
+                </div>
+              </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+                <!-- <button type="button" class="btn save-new-btn">Save &amp; New</button> -->
+                <button type="button" class="btn save-btn" id="buttonExcelUpload" onclick="excelFileUpload();">Save</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        
+        
+         <div class="modal fade" id="modal-danger">
+          <div class="modal-dialog">
+            <div class="modal-content">
+   <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>API</h3>
+              <form action="" method="get">
+              <div class="contact-form">
+              <h4><a href="" data-tooltip title="How to use API">? How to use API</a></h4>
+                <ul>
+                <li><label>URL:</label> https://Bizlam.com</li>
+                 <li><label>Request:</label> https://Bizlam.com</li>
+                 <li><label>Response:</label>  https://Bizlam.com</li>
+                </ul>
+              </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn cancel-btn" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn save-new-btn">Save &amp; New</button>
+                <button type="button" class="btn save-btn">Save</button>
+              </div>
+            </div>
+            <!-- /.modal-content -->
+          </div>
+          <!-- /.modal-dialog -->
+        </div>
+        
+        
+
+        
+        <!-- /.modal -->
+
+    </section>
+   
+    <!-- Main content -->
+    <section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="contact-container">
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header">
+              <h3 class="box-title">Contact Details</h3>
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body table-responsive no-padding" style="overflow-x:auto;" id="getAllFieldData">
+             <!--  <table class="table table-hover" id="getAllFieldDataTable"> -->
+               <!--  <tbody id="getAllFieldData"> -->
+              <!--  <tbody id="getAllFieldData">  -->
+                
+               <!--  <tr>
+                  <th>Name</th>
+                  <th>Company</th>
+                  <th>Phone</th>
+                  <th>Email</th>
+                  <th>Type</th>
+                  <th>Created By</th>
+                </tr> -->
+                
+                
+              <!--  <tr>
+               <a href="#">
+               <td>John</td>
+               <td>www.tech.com</td>
+               <td>1234567890</td>
+               <td>test@gmail.com</td>
+               <td>Customer</td>
+               <td>Alexander</td>
+               </a>
+               </tr>
+               <tr >
+               <td>Nathen</td>
+               <td>www.tech.com</td>
+               <td>1234567890</td>
+               <td>test@gmail.com</td>
+               <td>Employee</td>
+               <td>Alexander</td>
+               </tr>
+               <tr >
+               <td>Jony</td>
+               <td>www.tech.com</td>
+               <td>1234567890</td>
+               <td>test@gmail.com</td>
+               <td>Lead</td>
+               <td>Alexander</td>
+               </tr>
+               <tr >
+               <td>Zak</td>
+               <td>www.tech.com</td>
+               <td>1234567890</td>
+               <td>test@gmail.com</td>
+               <td>Other</td>
+               <td>Alexander</td>
+               </tr> -->
+               
+             <!--  </tbody>
+              
+              
+              </table> -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        
+        </div>
+      </div>
+</section>
+  
+  

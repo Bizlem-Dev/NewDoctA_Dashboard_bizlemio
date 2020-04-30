@@ -1,0 +1,41 @@
+<div class="row" style="margin-left: 1px; margin-right: 1px;">
+<div class="col-md-8" style="margin-top: 10px; margin-left: 1px; margin-right: 1px;">
+
+<div class="form-group">
+      <label for="RegionName">Region Name:</label>
+      <input type="text" class="form-control" id="RegionName" name="RegionName" onfocusout="gplDocumentGenerationData()">
+</div>
+
+<div class="form-group">
+    <label>Project List:</label>
+     <select class="form-control" id="projectListHeroku" onchange="displayBookingIdHeroku();">
+        <option value="0">Select Project List</option>
+      </select>
+ </div>
+
+<div class="form-group">
+    <label>Letter Type:</label>
+     <select class="form-control" id="letterTypeHeroku">
+        <option value="0">Select Letter Type</option>
+        <option value="1">AgreementLetterDynamic</option>
+      </select>
+ </div>
+
+<div class="form-group">
+    <label>Application Booking Id:</label>
+     <select class="form-control" id="applicationBookingIdHeroku">
+        <option value="0">Select Application Booking Id</option>
+      </select>
+ </div>
+
+
+  <button type="button" class="btn btn-primary" onclick="GenerateDocumentGPL()">Generate</button>
+
+<br><br>
+
+<div class="form-group">
+     <p id="GPLdocumentUrlGenerateId"></p>
+ </div>
+
+</div>
+</div>

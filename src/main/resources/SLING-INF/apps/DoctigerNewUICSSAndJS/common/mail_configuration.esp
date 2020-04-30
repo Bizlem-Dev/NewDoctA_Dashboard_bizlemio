@@ -1,0 +1,103 @@
+<div class="content-header">
+          <div class="row">
+              <div class="col-md-12">
+              <!-- Custom Tabs -->
+              <div class="nav-tabs-custom">
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#mailtab_1" data-toggle="tab">OAUTH SET UP</a></li>
+                  <li><a href="#mailtab_2" data-toggle="tab">NORMAL SET UP</a></li>
+                  <li id=""><a href="#massmailer" role="tab"
+						data-toggle="tab">Mass Mailer</a></li>
+                </ul>
+                <div class="tab-content">
+                  <div class="tab-pane active" id="mailtab_1">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="btn btn-info" onclick="login();" id="loginText"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+                            <a href="#" class="btn btn-info" onclick="Outlook_url_login();" id="">Outlook</a>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- /.tab-pane -->
+                  <div class="tab-pane" id="mailtab_2">
+                      <div class="row">
+                          <div class="col-md-12" style="margin-top:10px;">
+                              <div class="row">
+                                  <div class="col-md-2">
+                                      <label style="padding-top:6px;">Select Mails</label>
+                                  </div>
+                                  <div class="col-md-4" style="margin-left:-80px;">
+                                      <select class="form-control" id="allmails">
+                                          <option>Gmail</option>
+                                          <option>Outlook</option>
+                                          
+                                      </select>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-12" style="margin-top:20px;">
+                              <div class="row">
+                                  <div class="col-md-4">
+                                      <input type="" name="" class="form-control" placeholder="Username" id="usernamemail">
+                                  </div>
+                                  <div class="col-md-4">
+                                      <input type="" name="" class="form-control" placeholder="Password" id="passwordmails">
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-md-12" style="margin-top:20px;">
+                              <input type="button" class="btn btn-primary" id="normalsetupsave" name="save" value="Save">
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <!--massmailert start here-->
+					<div class="tab-pane" id="massmailer">
+
+						<div class="row">
+						
+							<div class="col-sm-12 addMore">
+
+								<div class="row">
+									
+									<div class="col-sm-2">
+															<div class="check-external-parameter-mail-temp">
+																<input id="emm" type="checkbox" class="emm"
+																	name="" value="mass mailer" /> <label for="emm">
+																	 <span>Enable Mass Mailer</span>
+																</label>
+															</div>
+														</div>
+									
+									
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="row">
+							<div class="col-sm-12">
+								<input type="button" class="btn btn-bg-blue btn-edit"
+									id="massmailersave" name="save" value="Save">
+							</div>
+							
+							<br>
+							
+							<!-- <input type="text" style="border:none" id="errorTypeId" size="31" style="display: none;" style = "margin-left:12%"/> -->
+							
+							<input type="text" style="border:none" id="errorTypeId" size="29" style="display: none;"/>
+							
+						</div>
+						
+					</div>
+					<!--mass mailer end here -->
+                  
+                  
+                  
+                </div>
+                <!-- /.tab-content -->
+              </div>
+              <!-- nav-tabs-custom -->
+            </div>
+          </div>
+      </div>

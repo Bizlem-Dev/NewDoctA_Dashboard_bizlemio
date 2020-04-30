@@ -1,0 +1,73 @@
+<section class="content" style="padding: 5px 0px 0px 0px;">
+
+<div class="row">
+<div class="col-md-12">
+
+<div class="box box-danger">
+            <div class="box-header text-center with-border" style="background-color: #FFD73C;">
+              <h3 class="" style="margin: 0px; font-weight: bold; color: #000; font-size: 28px;">Standard Document</h3>
+            </div>
+            <div class="box-body firstDocument">
+                <div class="row">
+                  <div class="col-md-3">
+                    <a href="#welcomePage" class="btn-danger btn" data-toggle="tab"><i class="fa fa-home"></i> Home</a>
+                  </div>
+                  <div class="col-md-3 pull-right select-domain-section">
+                    <select class="form-control" id="domainselectclsNewwelcome">
+                      <option>Domain Not Available</option>
+                      <!-- <option>Select Domain 1</option>
+                      <option>Select Domain 2</option>
+                      <option>Select Domain 3</option>
+                      <option>Select Domain 4</option> -->
+                    </select>
+                  </div>
+                </div>
+                <div class="row img-box" style="margin-top:20px; min-height: 400px;" id="tempNewWelcomeDivId">
+                 
+                    <!-- <div class="col-md-3 img-box-section">
+                     <a href="#fill-the-data-document-generation" data-toggle="tab">
+                          <p>Offer letter</p>
+                          </a>
+                    </div>
+                  
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Appointment letter</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Employment agreement</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Appraisal letter</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Student report card</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Sales quotation</p>
+                      </a>
+                  </div>
+                  <div class="col-md-3 img-box-section">
+                      <a href="#fill-the-data-document-generation" data-toggle="tab">
+                        <p>Sale purchase agreement</p>
+                      </a>
+                  </div> -->
+                </div>
+            </div>
+          </div>
+
+</div>
+</div>
+
+
+
+
+</section>

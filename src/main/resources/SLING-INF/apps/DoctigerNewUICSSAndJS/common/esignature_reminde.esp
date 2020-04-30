@@ -1,0 +1,25 @@
+<section class="content dashboard" style="padding-top:20px;">
+      <div class="row">
+          <div class="col-md-12">
+          <div class="box box-primary">
+             
+            <div class="data-l">
+						<div class="search-box fcb">
+							<h4 class="head-big fl">Latest document</h4>
+						</div>
+						<div class="row">
+						<div class="col-md-12" style="padding: 20px 35px;">
+							<table cellpadding="0" class="table" cellspacing="0" border="0" id="list-all-esignaturereminder" style="table-layout: fixed;overflow: hidden;">
+								
+							</table>
+							<!-- <p class="noresult">There is no corresponding document.</p> -->
+						</div>
+					</div>
+					</div>
+            
+            
+            
+          </div>
+          </div>
+        </div>  
+    </section>

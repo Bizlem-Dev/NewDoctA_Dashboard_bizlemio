@@ -1,0 +1,134 @@
+<section class="content">
+      <!-- Info boxes -->
+      <div class="row">
+        <div class="contact-container">
+
+        <div class="col-xs-12">
+          <div class="box">
+            
+            <!-- /.box-header -->
+            <div class="box-body table-responsive">
+              <table class="table table-hover clause-section">
+                <tbody id="mailtemplateapprovaltbody">
+                  <tr>
+                    <th>Sr No.</th>
+                    <th class="clause_name">MailTemplate Name</th>
+                    <th>View</th>
+                    <th colspan="3" align="center" class="text-center action-column">Approval</th>
+                  </tr>
+                  
+         
+
+                </tbody>
+              </table>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        
+        </div>
+      </div>
+    </section>
+<!-- Modals -->
+    <div class="modal fade" id="mail-view-change">
+        <div class="modal-dialog generate-document-dialog">
+          <div class="modal-content">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+            <div class="contact-model">
+            <h3>Request Change</h3>
+              <div class="clause-form">
+                <div class="" style="width: 99%;">
+                  <div class="row">  
+                    <div class="col-md-12 text-left">
+                        <form role="form">
+                            <div class="box-body">
+                              <div class="form-group">
+                                <label>To</label>
+                                <input type="text" class="form-control" id="mail__to" name="" value="">  
+                              </div>
+                              <div class="form-group">
+                                  <label>Cc</label>
+                                  <input type="text" class="form-control" id="mail__cc" name="" value="">  
+                              </div>
+                               <div class="form-group">
+                                  <label>Bcc</label>
+                                  <input type="text" class="form-control" id="mail__bcc" name="" value="">  
+                              </div> <div class="form-group">
+                                  <label>Subjecte</label>
+                                  <input type="text" class="form-control" id="mail__subject" name="" value="">  
+                              </div>
+                              <div class="form-group">
+                                  <label>Body</label>
+                                  <textarea class="form-control" name="" id="mail__body"  value="" rows="3"> </textarea> 
+                              </div>
+                              
+                              
+                            </div>
+                            <!--<div class="box-footer">
+                              <button type="button" class="btn btn-primary" name="" >Submit Changes</button>
+                            </div>-->
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+    <!-- Modals -->
+    <div class="modal fade" id="mail-request-change">
+        <div class="modal-dialog generate-document-dialog">
+          <div class="modal-content">
+            <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+            <div class="contact-model">
+            <h3>Request Change</h3>
+              <div class="clause-form">
+                <div class="" style="width: 99%;">
+                  <div class="row">  
+                    <div class="col-md-12 text-left">
+                        <form role="form">
+                            <div class="box-body">
+                              <div class="form-group">
+                                <label>Language</label>
+                                <input type="text" class="form-control" name="" value="">  
+                              </div>
+                              <div class="form-group">
+                                  <label>Clause name</label>
+                                  <input type="text" class="form-control" name="" value="">  
+                              </div>
+                              <div class="form-group">
+                                  <label>Clause</label>
+                                  <textarea class="form-control" name="" value="" rows="3"> </textarea> 
+                              </div>
+                              <div class="form-group">
+                                  <label>SubClause2</label>
+                                  <textarea class="form-control" name="" value="" rows="3"> </textarea> 
+                              </div>
+                              <div class="form-group">
+                                  <label>SubClause3</label>
+                                  <textarea class="form-control" name="" value="" rows="3"> </textarea> 
+                              </div>
+                              
+                            </div>
+                            <div class="box-footer">
+                              <button type="button" class="btn btn-primary" name="" >Submit Changes</button>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>

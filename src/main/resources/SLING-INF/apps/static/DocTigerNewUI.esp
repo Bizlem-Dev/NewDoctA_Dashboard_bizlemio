@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>DocTiger | Dashboard</title>
+
+<link href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/doctiger-fevicon.png" rel="icon">
+<link href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/doctiger-fevicon.png" rel="apple-touch-icon">
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/Ionicons/css/ionicons.min.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/AdminLTE.min.css">
+<link rel="stylesheet"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/skins/_all-skins.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css"
+	href="https://www.jqueryscript.net/demo/jQuery-Multiple-Select-Plugin-For-Bootstrap-Bootstrap-Multiselect/css/bootstrap-multiselect.css">
+<link rel="stylesheet" type="text/css"
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/css/custom.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+<link rel="stylesheet" type="text/css"
+	href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+<link
+	href="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/jquery_ui/jquery-ui.css"
+	rel="stylesheet">
+	
+	<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.css"
+	rel="stylesheet">
+	
+
+<style type="text/css">
+.generate-document-dialog {
+	width: 30%;
+}
+</style>
+<style type="text/css">
+    .product-info a,
+    .col-item h5,
+    .right-step-part a{
+      font-size: 16px;
+    }
+    .right-step-part a{
+      width: calc(100% - 45px);
+      float: right;
+      margin-bottom: 5px;
+    }
+    .show-more{
+      display: none;
+    }
+  </style>
+
+
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div id="load"></div>
+<!-- <div id="loadGen" style="display:none;"></div> -->
+ <div id="loadmail" style="display:none;"></div> 
+	<!-- start show pdf preview -->
+
+	<!-- <div id="dialog" style="display:none; height:800; width:500 ">
+                          <div > 
+                <iframe src="" width="800" height="500" style="border:none;" id="iframeId"></iframe>
+                         </div>
+                </div> -->
+
+
+	<div id="myModal" class="modal fade" role="dialog" data-backdrop="static" data-keyboard="false">
+		<div class="modal-dialog modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" id="pdfFileName"></h4>
+				</div>
+				<div class="modal-body">
+
+					<embed src="" frameborder="0" width="100%" height="600px"
+						id="iframeId">
+					<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div> -->
+				</div>
+				<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- end show pdf preview -->
+<%   var session1 = request.getSession();
+var lgtype=request.getParameter('lgtype');
+			var lgtypesession=session1.getAttribute('lgtype');
+			if(lgtype!=null && !lgtype.equalsIgnoreCase("") && !lgtype.equalsIgnoreCase("null") ){
+			session1.setAttribute("lgtype", lgtype);
+			}
+			%>
+	<form>
+		<input type=hidden id="email" name="email"
+			value="<%=request.getRemoteUser()%>" />
+			<input type=hidden id="lgtype" name="lgtype"
+			value="<%=session1.getAttribute('lgtype')%>" />
+			
+			<input type=hidden id="remoteuser" name="remoteuser"
+              value="<%=request.getRemoteUser()%>" />
+			
+	</form>
+
+	<div class="wrapper">
+		<header class="main-header">
+			<a href="index2.html" class="logo"> <span class="logo-mini"><b>A</b>LT</span>
+				<!-- <span class="logo-lg"><b>Admin</b>LTE</span> --> 
+				<span class="logo-lg">
+				<!-- <b>Doc</b>Tiger -->
+				<!-- <img width="100" height="40" src="https://doctiger.com/wp-content/uploads/2019/09/doctiger-logo.png" class="" alt="doctiger_crm" srcset="https://doctiger.com/wp-content/uploads/2019/09/doctiger-logo.png 100w, https://doctiger.com/wp-content/uploads/2019/09/doctiger-logo-300x77.png 100w" sizes="(max-width: 100px) 100vw, 50px"/> -->
+				<img width="160" height="40" src="/portal/apps/DoctigerNewUICSSAndJS/img/docimg.png">
+				</span>
+			</a>
+			<nav class="navbar navbar-static-top">
+				<a href="#" class="sidebar-toggle" data-toggle="push-menu"
+					role="button"> <span class="sr-only">Toggle navigation</span>
+				</a>
+				<div class="navbar-custom-menu">
+					<ul class="nav navbar-nav">
+						<li class="dropdown user user-menu"><a href="#"
+							class="dropdown-toggle" data-toggle="dropdown"> <%-- <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/dist/img/user2-160x160.jpg" class="user-image" alt="User Image"> --%>
+								<span class="hidden-xs" id="userNameId"></span>
+						</a>
+							<ul class="dropdown-menu">
+								<%-- <li class="user-header">
+                <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li> --%>
+								<li class="user-body text-left">
+									<div class="row">
+										<!-- <div class="col-md-12">
+											<div class="form-group">
+												<a href="#">Switch workspace</a>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<a href="#">Account</a>
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<a href="#">Inbox</a>
+											</div>
+										</div>
+										<div class="col-md-12">
+										<div class="form-group">
+											<a href="#">Product updates</a>
+											</div>
+										</div> -->
+										<div class="col-md-12">
+										<div class="form-group">
+											<a href="#settingsnew" onclick="displaysettingtabsbyrolefun()" data-toggle="tab">Settings</a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="user-footer">
+									<!-- <div class="pull-left">
+										<a href="#" class="btn btn-default btn-flat"> Profile
+											Setting</a>
+									</div> -->
+									<div class="pull-right">
+										<%
+											if (request.getRemoteUser() != null && !request.getRemoteUser().equals("anonymous")
+													&& !request.getRemoteUser().equals("admin")) {
+										%>
+										<a href="javascript:void(0)" class="btn btn-default btn-flat"
+											onclick="logout('<%=currentNode.session.getRootNode().getNode("content").getNode("user")
+						.getNode(request.getRemoteUser().replace("@", "_")).secondaryId%>')">Logout
+										</a>
+										<%
+											}
+										%>
+									</div>
+
+
+
+								</li>
+							</ul></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<aside class="main-sidebar">
+			<section class="sidebar">
+				<%--  <div class="user-panel">
+        <div class="pull-left image">
+          <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p><br>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div> --%>
+				<!-- <form action="#" method="get" class="sidebar-form">
+					<div class="input-group">
+						<input type="text" name="q" class="form-control"
+							placeholder="Search..."> <span class="input-group-btn">
+							<button type="submit" name="search" id="search-btn"
+								class="btn btn-flat">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</form> -->
+				<!-- <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active">
+          <a href="index2.html">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="contactUs.html">
+            <i class="fa fa-envelope-o"></i> <span>Contact</span>
+          </a>
+        </li>
+      </ul>-->
+
+				<ul class="sidebar-menu" data-widget="tree">
+					<li class="header">MAIN NAVIGATION</li>
+					
+					<%
+					if(request.getRemoteUser().equals("maitreyee.p@godrejproperties.com")){ %>
+					
+					</li>
+					<li class="dashboardA"><a href="#dashboard" data-toggle="tab" onclick="getRecentDocumentData();removeUnnecessoryOnclickBack();"><i
+							class="fa fa-dashboard" aria-hidden="true" ></i><span>Dashboard</span>
+					<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span> </span></a></li>
+					<li>
+          <a href="#addnew"  onclick="displayAddNewTabSrcData();removeUnnecessoryOnclickBack();" target="_blank">
+            <i class="fa fa-plus"></i> <span> Add New</span>
+            <span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+          </a>
+        </li>
+        <li class="gplA" onclick=""><a href="#Gpl" data-toggle="tab"><i class="fa fa-file" aria-hidden="true" ></i><span>GPL Letter</span>
+          </a></li>
+          
+          <li class="gplDocumentGenerationA" onclick=""><a href="#gplDocumentGeneration" data-toggle="tab"><i class="fa fa-file" aria-hidden="true" ></i><span>GPL Document Generation</span>
+          </a></li>
+					
+						<% }else{ %>
+
+					<li class="active welcomeA"><a href="#welcomePage"
+						data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"> <i class="fa fa-hand-paper-o"></i><span>Welcome</span>
+						
+						<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+                </span>
+						
+					</a></li>
+					<li class="dashboardA"><a href="#dashboard" data-toggle="tab" onclick="getRecentDocumentData();removeUnnecessoryOnclickBack();"><i
+							class="fa fa-dashboard" aria-hidden="true" ></i><span>Dashboard</span>
+							
+							 <span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+               </span>
+							
+							</a></li>
+							
+							<li>
+          <a href="#addnew"  onclick="displayAddNewTabSrcData();removeUnnecessoryOnclickBack();" target="_blank">
+            <i class="fa fa-plus"></i> <span> Add New</span>
+            <span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+          </a>
+        </li>
+							
+					<li class="contactUsA"><a href="#contactus" data-toggle="tab"
+						onclick="getFileNameList();removeUnnecessoryOnclickBack();"><i class="fa fa-envelope-o"
+							aria-hidden="true"></i> <span>Contacts</span>
+							
+							<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+							
+							</a></li>
+
+
+					<!-- Document Management start here -->
+
+					<li class="treeview treeviewA"><a href="#documentmanagement"
+						data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"> <i class="fa fa-file" aria-hidden="true"></i>
+							<span>Document Management</span> 
+							
+							<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+							
+							<span
+							class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<!-- <li class="filesDataA"><a href="#filesData"
+								data-toggle="tab"><i class="fa fa-circle-o"></i>Files</a></li> -->
+							<!-- files.html -->
+							<li><a href="#folderData" data-toggle="tab"
+								onclick="folderCode();removeUnnecessoryOnclickBack();"><i class="fa fa-circle-o"></i>Folder</a></li>
+							<!-- folder.html -->
+							<!-- <li><a href="#trailData" data-toggle="tab"><i
+									class="fa fa-circle-o"></i>Trail</a></li> -->
+							<!-- trail.html -->
+						</ul></li>
+
+
+					<!-- Document Management end here -->
+
+					<!-- <li class="bookingtabA"><a href="#bookingtab"
+						data-toggle="tab"><i class="fa fa-book" aria-hidden="true"></i>
+							<span>BookingId</span></a></li> -->
+
+					<!--Settings Tab Start here  -->
+
+<!-- Settingtab -->
+
+					<li class="treeview" class="settingLiA"><a href="#"    
+						data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"> <i class="fa fa-cog" aria-hidden="true"></i>
+							<span>Setting</span> 
+							
+							<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+							
+							<span class="pull-right-container"> <i
+								class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<li class="add-menu-disable">GENERAL</li>
+
+							<!-- <li><a href="#profile" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Profile</a></li>
+							<li><a href="#building" target="_blank" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Building</a></li> -->
+
+							<!-- <li><a href=""><i class="fa fa-circle-o"></i> Workspaces</a></li> -->
+							<li><a href="#mailconfiguration" data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"><i class="fa fa-circle-o"></i> Mail Configuration</a></li>
+							<li><a href="#approverconfiguration" data-toggle="tab" onclick="ontabapproverconfig();removeUnnecessoryOnclickBack();"><i class="fa fa-circle-o"></i> Approver Configuration</a></li>
+							
+
+							<!-- <li class="add-menu-disable">WORKSPACE SETTINGS</li>
+							<li><a href="#payments" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> payments</a></li>
+							<li><a href="#integrations" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Integration</a></li>
+							<li><a href="#team" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Team</a></li>
+							<li><a href="#setting" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Settings</a></li>
+							<li><a href="#branding" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Branding</a></li>
+							<li><a href="#savedmessages" data-toggle="tab"><i
+									class="fa fa-circle-o"></i> Saved messages</a></li> -->
+
+						</ul></li>
+
+					<!--Settings Tab End here  -->
+
+					<li class="reportsA"><a href="#reports" data-toggle="tab"
+						onclick="getDocumentTrackingDataOnLoad();removeUnnecessoryOnclickBack();" class="loadImageIconId"><i
+							class="fa fa-pencil-square-o" aria-hidden="true"></i> <span>Report</span>
+							
+							<span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+							
+							</a></li>
+
+					<!-- menu start here -->
+
+					<li class="treeview approvalA"><a href="#Approvals"
+						data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"> <i class="fa fa-file" aria-hidden="true"></i>
+							<span>Approvals</span> <span class="pull-right-container">
+								<i class="fa fa-angle-left pull-right"></i>
+						</span>
+					</a>
+						<ul class="treeview-menu">
+							<li class="clausesubA"><a href="#clause" data-toggle="tab"
+								onclick="clauseapprovallist();removeUnnecessoryOnclickBack();"><i class="fa fa-circle-o"></i>Clause</a></li>
+							<li class="templatesubA"><a href="#template" data-toggle="tab"
+								onclick="Templateapprovallist();removeUnnecessoryOnclickBack();"><i class="fa fa-circle-o"></i>
+									Template</a></li>
+							<li class="emailnewsubA"><a href="#emailnew" data-toggle="tab"
+								onclick="MailTemplateapprovallist();removeUnnecessoryOnclickBack();"><i
+									class="fa fa-circle-o"></i>Email</a></li>
+							<li class="ruleenginesubA"><a href="#ruleengine" data-toggle="tab" onclick="removeUnnecessoryOnclickBack();"><i
+									class="fa fa-circle-o ruleApprovaltab"></i>Rule Engine</a></li>
+						</ul></li>
+        <li class="esignatureRemindA" onclick="loadesignaturereminder();removeUnnecessoryOnclickBack();"><a href="#esignature-reminder" data-toggle="tab"><i class="fa fa-circle-o" aria-hidden="true" ></i><span>Esignature Reminder</span>
+        
+         <span class="tool">
+                <span class="tool-tip" data-toggle="tooltip" title="Test Text Test Text" data-placement="right">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                </span>
+              </span>
+        
+        </a></li>
+        
+         <li class="gplA" onclick=""><a href="#Gpl" data-toggle="tab"><i class="fa fa-file" aria-hidden="true" ></i><span>GPL Letter</span>
+          </a></li>
+          
+          <li class="gplDocumentGenerationA" onclick=""><a href="#gplDocumentGeneration" data-toggle="tab"><i class="fa fa-file" aria-hidden="true" ></i><span>GPL Document Generation</span>
+          </a></li>
+
+					
+       <% } %>
+				</ul>
+			</section>
+		</aside>
+		<div class="tab-content">
+
+			<!-- Content Wrapper. Contains page content -->
+			<div id="dashboard" class="content-wrapper tab-pane ">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/dashbord.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+			<div id="contactus" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/contactus.esp");
+				%>
+			</div>
+
+
+			<div id="welcomePage" class="content-wrapper tab-pane active">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/welcome.esp");
+				%>
+			</div>
+
+
+			<!-- /.content-wrapper -->
+			<div id="filesData" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/files.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+
+			<!-- /.content-wrapper -->
+			<div id="folderData" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/folder.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+
+			<!-- /.content-wrapper -->
+			<div id="trailData" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/trail.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+
+			<!-- /.content-wrapper -->
+			<div id="bookingtab" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/DocBookingDashBoard.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+
+			<!-- /.content-wrapper -->
+			<div id="newFileData" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/new-file.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+			
+			<!-- /.content-wrapper -->
+			<div id="fill-the-data-document-generation" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/fill-the-data-document-generation.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+			
+
+			<!--settings data Load start here -->
+
+			<div id="profile" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/profile.esp");
+				%>
+			</div>
+			<div id="mailconfiguration" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/mail_configuration.esp");
+				%>
+			</div>
+			<div id="approverconfiguration" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/Approver_configuration.esp");
+				%>
+			</div>
+
+			<div id="building" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/building.esp");
+				%>
+			</div>
+
+			<div id="payments" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/payments.esp");
+				%>
+			</div>
+
+			<div id="integrations" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/integrations.esp");
+				%>
+			</div>
+
+			<div id="team" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/team.esp");
+				%>
+			</div>
+
+			<div id="setting" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/setting.esp");
+				%>
+			</div>
+
+			<div id="branding" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/branding.esp");
+				%>
+			</div>
+
+			<div id="savedmessages" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/saved-messages.esp");
+				%>
+			</div>
+
+			<div id="emailnew" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/email.esp");
+				%>
+			</div>
+
+			<div id="clause" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/clause.esp");
+				%>
+			</div>
+			<div id="template" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/template.esp");
+				%>
+			</div>
+
+			<div id="ruleengine" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/rule_engine.esp");
+				%>
+			</div>
+
+			<div id="settingsnew" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/settings.esp");
+				%>
+			</div>
+			<!--settings data Load End here  -->
+
+             <div id="esignature-reminder" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/esignature_reminde.esp");
+				%>
+			</div>
+
+			<div id="reports" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/report.esp");
+				%>
+			</div>
+			
+			<!-- /.content-wrapper -->
+			<div id="generatedocumentesp" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/GenerateDocument.esp");
+				%>
+			</div>
+			<!-- /.content-wrapper -->
+			
+			<div id="Gpl" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/GplEsp.esp");
+				%>
+			</div>
+
+          <div id="gplDocumentGeneration" class="content-wrapper tab-pane">
+				<%
+					load("/apps/DoctigerNewUICSSAndJS/common/GplDocumentGeneration.esp");
+				%>
+			</div>
+
+
+		</div>
+
+		<footer class="main-footer">
+			<strong>Copyright &copy; 2019 </strong> All rights reserved.
+		</footer>
+	</div>
+	<!-- ./wrapper -->
+	<!-- jQuery 3 -->
+	<script
+		src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/js/jquery.min.js"></script>
+	<!-- Bootstrap 3.3.7 -->
+	<script
+		src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/js/bootstrap.min.js"></script>
+	<!-- FastClick -->
+	<script
+		src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+
+	<script
+		src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/js/adminlte.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script
+		src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
+
+	<script
+		src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/js/DashBoardcustom.js"
+		type="text/javascript"></script>
+
+	<script
+		src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/jquery_ui/jquery-ui.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+	<!-- Sparkline -->
+	<script
+		src="https://www.jqueryscript.net/demo/jQuery-Multiple-Select-Plugin-For-Bootstrap-Bootstrap-Multiselect/js/bootstrap-multiselect.js"></script>
+		
+	<script	src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$("#list").change(function() {
+				selection = $(this).val();
+				if (selection == 0) {
+					$('#contact').modal('show');
+				} else if (selection == 1) {
+					$('#upload-file').modal('show');
+				} else if (selection == 2) {
+					$('#enter-manually').modal('show');
+				}
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$("#example2").change(function() {
+				selection = $(this).val();
+				if (selection == 'select-tamplate') {
+					$('.open-select-tam').css('display', 'block');
+				} else {
+					$('.open-select-tam').css('display', 'none');
+				}
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+		var hrefFull1 = location.href.match(/([^\/]*)\/*$/)[1];
+		//$('.sidebar-menu').find('li').removeClass('active');
+		console.log("hrefFull1Check: "+hrefFull1);
+		
+		if (hrefFull1 == 'UIDoctiger#welcomePage') {
+			$('.welcomeA a').trigger('click');
+		}
+		if (hrefFull1 == 'UIDoctiger#dashboard') {
+			$('.dashboardA a').trigger('click');
+		}
+		if (hrefFull1 == 'UIDoctiger#contactus') {
+			$('.contactUsA a').trigger('click');
+		//	selectworkingroupfun("working-group-DropdownClass");
+			//getFileNameList();
+		}
+		if (hrefFull1 == 'UIDoctiger#bookingtab') {
+			$('.bookingtabA a').trigger('click');
+		}
+		if (hrefFull1 == 'UIDoctiger#documentmanagement') {
+			$('.treeviewA a').trigger('click');
+		}
+		
+		//if (hrefFull1 == 'UIDoctiger#Settingtab') {
+			//$('.settingLiA a').trigger('click');
+		//}
+		
+		if (hrefFull1 == 'UIDoctiger#reports') {
+			$('.reportsA a').trigger('click');
+			 
+			//getDocumentTrackingDataOnLoad();
+			 
+		}
+		if (hrefFull1 == 'UIDoctiger#Approvals') {
+			$('.approvalA a').trigger('click');
+		}
+		 if (hrefFull1 == 'UIDoctiger#esignature-reminder') {
+				$('.esignatureRemindA a').trigger('click');
+				 
+			}
+		 if (hrefFull1 == 'UIDoctiger#Gpl') {
+				$('.gplA a').trigger('click');
+				 
+			}
+		 if (hrefFull1 == 'UIDoctiger#gplDocumentGeneration') {
+				$('.gplDocumentGenerationA a').trigger('click');
+				 
+			}
+		 
+		 if (hrefFull1 == 'UIDoctiger#clause') {
+				$('.clausesubA a').trigger('click');
+				 
+			}
+		 if (hrefFull1 == 'UIDoctiger#template') {
+				$('.templatesubA a').trigger('click');
+				 
+			}
+		 if (hrefFull1 == 'UIDoctiger#emailnew') {
+				$('.emailnewsubA a').trigger('click');
+				 
+			}
+		 if (hrefFull1 == 'UIDoctiger#ruleengine') {
+				$('.ruleenginesubA a').trigger('click');
+				 
+			}
+		 
+		 
+	</script>
+
+
+	<script>
+		//Reference: 
+		//https://www.onextrapixel.com/2012/12/10/how-to-create-a-custom-file-input-with-jquery-css3-and-php/
+		/* ; */
+		(function($) {
+
+			// Browser supports HTML5 multiple file?
+			var multipleSupport = typeof $('<input/>')[0].multiple !== 'undefined', isIE = /msie/i
+					.test(navigator.userAgent);
+
+			$.fn.customFile = function() {
+
+				return this
+						.each(function() {
+
+							var $file = $(this).addClass(
+									'custom-file-upload-hidden'), // the original file input
+							$wrap = $('<div class="file-upload-wrapper">'), $input = $('<input type="text" class="file-upload-input" />'),
+							// Button that will be used in non-IE browsers
+							$button = $('<button type="button" class="file-upload-button">Upload Excel With Data</button>'),
+							// Hack for IE
+							$label = $('<label class="file-upload-button" for="'+ $file[0].id +'">Select a File</label>');
+
+							// Hide by shifting to the left so we
+							// can still trigger events
+							$file.css({
+								position : 'absolute',
+								left : '-9999px'
+							});
+
+							$wrap.insertAfter($file).append($file, $input,
+									(isIE ? $label : $button));
+
+							// Prevent focus
+							$file.attr('tabIndex', -1);
+							$button.attr('tabIndex', -1);
+
+							$button.click(function() {
+								$file.focus().click(); // Open dialog
+							});
+
+							$file
+									.change(function() {
+
+										var files = [], fileArr, filename;
+
+										// If multiple is supported then extract
+										// all filenames from the file array
+										if (multipleSupport) {
+											fileArr = $file[0].files;
+											for (var i = 0, len = fileArr.length; i < len; i++) {
+												files.push(fileArr[i].name);
+											}
+											filename = files.join(', ');
+
+											// If not supported then just take the value
+											// and remove the path to just show the filename
+										} else {
+											filename = $file.val().split('\\')
+													.pop();
+										}
+
+										$input.val(filename) // Set the value
+										.attr('title', filename) // Show filename in title tootlip
+										.focus(); // Regain focus
+
+									});
+
+							$input
+									.on({
+										blur : function() {
+											$file.trigger('blur');
+										},
+										keydown : function(e) {
+											if (e.which === 13) { // Enter
+												if (!isIE) {
+													$file.trigger('click');
+												}
+											} else if (e.which === 8
+													|| e.which === 46) { // Backspace & Del
+												// On some browsers the value is read-only
+												// with this trick we remove the old input and add
+												// a clean clone with all the original events attached
+												$file.replaceWith($file = $file
+														.clone(true));
+												$file.trigger('change');
+												$input.val('');
+											} else if (e.which === 9) { // TAB
+												return;
+											} else { // All other keys
+												return false;
+											}
+										}
+									});
+
+						});
+
+			};
+
+			// Old browser fallback
+			if (!multipleSupport) {
+				$(document)
+						.on(
+								'change',
+								'input.customfile',
+								function() {
+
+									var $this = $(this),
+									// Create a unique ID so we
+									// can attach the label to the input
+									uniqId = 'customfile_'
+											+ (new Date()).getTime(), $wrap = $this
+											.parent(),
+
+									// Filter empty input
+									$inputs = $wrap.siblings().find(
+											'.file-upload-input').filter(
+											function() {
+												return !this.value
+											}),
+
+									$file = $('<input type="file" id="'
+											+ uniqId + '" name="'
+											+ $this.attr('name') + '"/>');
+
+									// 1ms timeout so it runs after all other events
+									// that modify the value have triggered
+									setTimeout(function() {
+										// Add a new input
+										if ($this.val()) {
+											// Check for empty fields to prevent
+											// creating new inputs when changing files
+											if (!$inputs.length) {
+												$wrap.after($file);
+												$file.customFile();
+											}
+											// Remove and reorganize inputs
+										} else {
+											$inputs.parent().remove();
+											// Move the input so it's always last on the list
+											$wrap.appendTo($wrap.parent());
+											$wrap.find('input').focus();
+										}
+									}, 1);
+
+								});
+			}
+
+		}(jQuery));
+
+		$('input[type=file]').customFile();
+
+		$(document).ready(function() {
+			$('#example').DataTable();
+		});
+		$('#example').dataTable({
+			"bPaginate" : false,
+		});
+		$(document).ready(function() {
+			$('#example2').multiselect();
+		});
+	</script>
+	<script>
+		function logout(uid){
+$.ajax({
+						type : 'GET',
+						url : '<c:out value="http://bluealgo.com:8078/OpenFireClient/Logout.jsp',
+						data : {
+							username : uid
+						},
+						complete : function() {
+							window.location = "https://bluealgo.com:8083/portal/logout.jsp";
+						}
+					});
+		}
+		
+		
+		$('.show').click(function () {
+		      $('.show-more').toggle();
+
+		      if ($(this).text() == "Show More")
+		       $(this).text("Hide")
+		      else
+		       $(this).text("Show More")
+		    });
+		
+		
+		$('#sendQuote').click(function () {
+		      $('#sendQuoteDiv').css('display','block');
+		    });
+		    $('#viewRules').click(function () {
+		      $('#sendQuoteDiv').css('display','none');
+		    });
+	</script>
+	
+	 <!-- <script>
+ if (location.protocol != "https:") {
+	 var url = window.location.href;
+	 url = url.replace("http","https");
+	 url = url.replace("8082","8083");
+	 window.location = url;
+	 }</script> -->
+</body>
+</html>

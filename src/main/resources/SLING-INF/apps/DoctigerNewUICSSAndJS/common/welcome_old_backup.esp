@@ -1,0 +1,1079 @@
+<section class="content" id="welcomeHideId">
+      <!-- Info boxes -->
+      <div class="row">
+      <div class="col-md-12">
+          <!-- Custom Tabs -->
+          <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Doc & contract generation</a></li>
+              <li class="" ><a href="#tab_2" data-toggle="tab" aria-expanded="false">Config price quote</a></li>
+              <li class="" onclick="loadesignature_atwelcome()"><a href="#tab_3" data-toggle="tab" aria-expanded="false">E-signature</a></li>
+              <li class="" onclick="loadetracking_atwelcome()"><a href="#tab_4" data-toggle="tab" aria-expanded="false">Tracking</a></li>
+              <li class=""><a href="#tab_5" data-toggle="tab" aria-expanded="false">MergeTell</a></li>
+            </ul>
+         <div class="tab-content">
+         <div class="tab-pane active" id="tab_1" style="overflow:hidden;">
+        <div class="contact-container">
+            <div  class="col-md-12">
+              <div class="row">
+                <div class="col-md-9">
+                  <div class="box box-primary">
+                    <div class="box-header text-center bg-info with-border">
+                      <h5 class="box-title">Select Document</h5>
+                    </div>
+                    <div class="box-body" style="min-height:214px;">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <form>
+                            <div class="row">
+                              <div class="col-md-12">
+                                 <div class="form-group">
+                                    <div class="radio">
+                                      <label class="mr-2" style="width: 50%; font-size: 16px;">
+                                          <input type="radio" name="options1" class="options1" value="0" checked>
+                                          Start with Non Disclosure Agreement <a href="#" data-toggle="tooltip" title="Test Text Test Text" data-placement="right"><i class="fa fa-question" aria-hidden="true"></i></a>
+                                      </label>
+                                       <label class="mr-2" style=" font-size: 16px;">
+                                          <input type="radio" name="options1" class="options1" value="1">
+                                          Select Domain <a href="#" data-toggle="tooltip" title="Test Text Test Text" data-placement="right"><i class="fa fa-question" aria-hidden="true"></i></a>
+                                      </label>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="row radio-option-select mb-1">
+                                <div class="col-md-6" id="domainnameId">
+                                  <div class="form-group">
+                                    <label>Select Domain</label>
+                                    <select class="form-control domainselectclasscls" id="domainselectcls">
+                                      <option>Select Domain</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-6" style="display: none;" id="domainsubId">
+                                  <div class="form-group">
+                                    <label>Select SubDomain</label>
+                                    <select class="form-control domainsubselectclasscls" id="domainsubselectcls">
+                                      <option>Select Sub Domain</option>
+                                    </select>
+                                  </div>
+                                </div>
+                                
+                                <div class="col-md-12" style="display: none;" id="mainRadioDiv">
+                                  <div class="radio" id="radioSingleId">
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options3" value="option1" checked>
+                                           Welcome Letter
+                                      </label>
+                                       <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options4" value="option2">
+                                          Spa   
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options5" value="option2">
+                                          Report Card  
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options6" value="option2">
+                                          Invoice 
+                                      </label>
+                                      <label class="mr-2" style="font-size: 16px;">
+                                          <input type="radio" name="options2" id="options7" value="option2">
+                                          Offer Letter 
+                                      </label>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class="form-group">
+                                  <label>Data Source</label>
+                                  <select class="form-control" id="list-form-data" onclick="showDataSourceWelcomePage()">
+                                  <option value="1">Select DataSource</option>
+                                    <option value="1">Merge Using Test Data Set</option>
+                                    <option value="2">Enter Data in Form</option>
+                                  </select>
+                                </div>
+                              </div>
+                             
+                            </div>
+                          </form>
+                        </div>
+                         <div class="col-md-12 mb-1">
+                                 <!--  <button class="btn btn-success" onclick="DGT();">Generate Document</button> -->
+                                  <button class="btn btn-primary"" disabled onclick="DocumentGenerationWelcomePage();" id="welcomeGenerateDocId">Generate Document</button>
+                                  <!-- <button class="btn btn-success">Preview Document</button> -->
+                                  <button type="button" id="previewBtnWelcome" disabled class="btn btn-primary" modalClass" data-toggle="modal" data-target="#myModal" onclick="DocumentPreviewpdfWelcomePage();">Preview Document</button>
+                                  <br>
+                                  <br>
+                             <p id="documentUrlGenerateIdWelcomePage"></p>
+                                  
+                              </div>
+                              
+                               <div class="col-md-12">
+                                      <button class="btn btn-success pull-right btn-lg get-started-btn" type="button">Start Here &nbsp;<i class="fa fa-angle-double-right" aria-hidden="true"></i></button>
+                                    </div>
+                              
+                            
+                              
+                      </div>    
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title" style="float: left; padding-top: 10px;">Steps</h5>
+                      <select id="stepUlSelect" class="form-control" style="float: right; width: 150px;">
+                        <option value="1">Simple Document</option>
+                        <option value="2">Advanced Document</option>
+                        <option value="3">Simple Contract</option>
+                        <option value="4">Advanced Contract</option>
+                      </select>
+                    </div>
+                    <div class="box-body right-step-part">
+                     <!--  <ul>
+                        <li><p>1</p><a href="" onclick="return false">Step 1</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Step 2</a></li>
+                        <li><p>3</p><a href="" onclick="return false">Step 3</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Step 4</a></li>
+                      </ul> -->
+                      
+                      <ul class="stepUl1">
+                        <li><p>1</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Generate First Document </a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create the Mail Template</a></li>
+                        <li><p>5</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl2">
+                        <li><p>1</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Generate First Document</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create the Mail template </a></li>
+                        <li><p>5</p><a href="" onclick="return false">Create Rule Engine </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Setup a Dynamic Document</a></li>
+                        <li><p>7</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl3">
+                        <li><p>1</p><a href="" onclick="return false">Setup Clauses </a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Add Clauses to template</a></li>
+                        <li><p>5</p><a href="" onclick="return false">Generator first document </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Create a Mail template</a></li>
+                        <li><p>7</p><a href="" onclick="return false">Add Contacts to Contact library </a></li>
+                      </ul>
+                      <ul class="stepUl4">
+                        <li><p>1</p><a href="" onclick="return false">Setup Clauses </a></li>
+                        <li><p>2</p><a href="" onclick="return false">Create your first template </a></li>
+                        <li><p>3</p><a href="" onclick="return false">Select Pre Created template from Gallery</a></li>
+                        <li><p>4</p><a href="" onclick="return false">Create Rule Engine </a></li>
+                        <li><p>5</p><a href="" onclick="return false">Setup a Dynamic Clause </a></li>
+                        <li><p>6</p><a href="" onclick="return false">Setup a Multi-Lingual Clause </a></li>
+                        <li><p>7</p><a href="" onclick="return false">Setup Clause Inter referencing</a></li>
+                        <li><p>8</p><a href="" onclick="return false">Setup a Dynamic Document </a></li>
+                        <li><p>9</p><a href="" onclick="return false">Setup a Dynamic Clause</a></li>
+                        <li><p>10</p><a href="" onclick="return false">Add Clauses To template</a></li>
+                        <li><p>11</p><a href="" onclick="return false">Generate First Document </a></li>
+                        <li><p>12</p><a href="" onclick="return false">Create a mail template </a></li>
+                        <li><p>13</p><a href="" onclick="return false">Setup Webservice</a></li>
+                        <li><p>14</p><a href="" onclick="return false">Add Contacts to Contact library</a></li>
+                      </ul>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+               <div class="row">
+                        <div class="col-md-12 get-started-section" style="display:none;">
+                          <div class="row">
+                            <div class="col-md-12">
+                              <h3>Welcome Home Page</h3>
+                            </div>
+                            <div class="col-md-12">
+                               <div id="myCarousel" class="row carousel slide" data-ride="carousel">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
+                                      <div class="item active">
+                                        <ul class="thumbnails">
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div><!-- /Slide1 --> 
+
+
+                                      <div class="item">
+                                        <ul class="thumbnails">
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div><!-- /Slide2 --> 
+
+
+                                      <div class="item">
+                                        <ul class="thumbnails">
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+
+                                          <li class="col-sm-3">      
+                                            <div class="thumbnail">
+                                              <a href="#"><img src="http://placehold.it/360x240" alt=""></a>
+                                            </div>
+                                            <div class="caption-box">
+                                              <h4>Get Started</h4>
+                                            </div>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                    <!-- Control box -->
+                                    <div class="control-box">                            
+                                      <a data-slide="prev" href="#myCarousel" class="carousel-control left"><i class="fa fa-angle-left"></i></a>
+                                      <a data-slide="next" href="#myCarousel" class="carousel-control right"><i class="fa fa-angle-right"></i></a>
+                                    </div>  
+                                  </div>
+                                  <hr>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+              
+              
+            </div>
+            </div>
+            </div><!-- first tab close -->
+            
+            <div class="tab-pane" id="tab_2" style="overflow:hidden;">
+                <div class="contact-container">
+                  <div class="col-md-12">
+                    <h4 style="margin:10px 0px 20px 0px; text-align: center; font-weight: bold;">Your First Quote</h4>
+                    <div class="row">
+                      <div class="col-md-3">
+                        <select class="form-control" id="product_name">
+                        
+                        <option>Doctiger101</option>
+                        <option>Doctiger201</option>
+                        <option>Doctiger301</option>
+                        <option>Doctiger401</option>
+                        <option>Doctiger501</option>
+                        <option>Doctiger601</option>
+                        <option>Doctiger701</option>
+                        
+                         <!--  <option>DT101</option>
+                          <option>DT201</option>
+                          <option>DT301</option> -->
+                        </select>
+                        <label>products</label>
+                      </div>
+                      <div class="col-md-2">
+                        <input type="text" name="" class="form-control" id="noofusers">
+                        <label>no of users</label>
+                      </div>
+                      <div class="col-md-2">
+                        <input type="text" name="" class="form-control" id="merge">
+                        <label>Merge</label>
+                      </div>
+                      <div class="col-md-3">
+                        <select class="form-control" id="pricingplan">
+                          <option value="1">Monthly</option>
+                          <option value="4">quarterly</option>
+                          <option value ="6">Half yearly</option>
+                          <option value ="12">yearly</option>
+                        </select>
+                        <label>pricing plan</label>
+                      </div>
+                      <div class="col-md-2">
+                        <button class="btn btn-sm btn-success show_quote" onclick ="getcpqdatastatic()" style="margin-bottom: 5px; float: left;">show Quote</button>
+
+                      </div>
+                    </div>
+
+                    <br>
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-10">
+                            <div class="box box-primary">
+                                <div class="box-body">
+                                  <button class="btn btn-sm btn-success show" style="margin-bottom: 5px; float: right;">Show More</button>
+                                    <div style="clear: both;"></div>
+                                    <div class="row bg-info cong-tab-tbl">
+                                        <div class="col-md-12" style="margin-bottom:-20px;">
+                                            <div class="row">
+                                                  <table class="table table-border table-bordered">
+                                                      <tbody>
+                                                          <tr style="border-bottom:1px solid #000;">
+                                                              <th></th>
+                                                              <th></th>
+                                                              <th></th>
+                                                              <th></th>
+                                                              <th>No Of Months</th>
+                                                              <th>Qty</th>
+                                                              <th>Rate</th>
+                                                              <th>Amt</th>
+                                                          </tr>
+                                                          <tr style="border-bottom:1px solid #000;">
+                                                            <td style="width: 120px;">Product A</td>
+                                                            <td style="width: 80px;" id="produnt_name_op_id"></td>
+                                                            <td style="width: 150px;"></td>
+                                                            <td></td>
+                                                            <td id="pricingplan_months"></td>
+                                                            <td id ="noofusers_op_id"><strong></strong></td>
+                                                            <td id="std_rate_op_id">20</td>
+                                                            <td id="undisc_amt_op_id"></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td><strong>Std (per user)</strong></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td>Merge</td>
+                                                            <td class="text-right" id="std_volume_op_id"></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td>Signature</td>
+                                                            <td class="text-right" id="std_signature_op_id"></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td><strong>Volume</strong></td>
+                                                            <td id="volume_op_id"></td>
+                                                            <td></td>
+                                                            <td>Extra Volume</td>
+                                                            <td></td>
+                                                            <td id= "extr_vol_op_id"></td>
+                                                            <td id="extr_vol_rate_op_id"></td>
+                                                            <td id="extr_vol_amt_op_id"></td>
+                                                            
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td colspan="2">
+                                                              <input type="checkbox" name="esign_cpq" id="esign_cpq_id">&nbsp;&nbsp; I do't need E-signature
+                                                            </td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td style="border-bottom:1px solid #000 !important;"></td>
+                                                            <td style="border-bottom:1px solid #000 !important;" ></td>
+                                                            <td style="border-bottom:1px solid #000 !important;" ></td>
+                                                            <td style="border-bottom:1px solid #000 !important;" ></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td style="border-bottom:1px solid #000 !important;"><strong>Subtotal</strong></td>
+                                                            <td style="border-bottom:1px solid #000 !important;"></td>
+                                                            <td style="border-bottom:1px solid #000 !important;"></td>
+                                                            <td style="border-bottom:1px solid #000 !important;" id="subtotal_op_id"><strong>300</strong></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td><strong>Discount</strong></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>Volume Discount</td>
+                                                            <td id="vol_disc_op_id"></td>
+                                                            <td id="vol_disc_amt_pr_usr_id"></td>
+                                                            <td id ="vol_disc_amt_id"></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>Payment Plan</td>
+                                                            <td id="pay_plan_disc_op_id"></td>
+                                                            <td id="payplan_disc_amt_pr_usr_id"></td>
+                                                            <td id ="payplan_disc_amt_id"></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>Country Discount</td>
+                                                            <td id="country_disc_op_id"></td>
+                                                            <td id="country_disc_amt_pr_usr_id"></td>
+                                                            <td id="country_disc_amt_id"></td>
+                                                          </tr>
+                                                          <tr class="show-more">
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td style="border-bottom:1px solid #000 !important; font-weight: bold;">Total Discount</td>
+                                                            <td style="border-bottom:1px solid #000 !important;"></td>
+                                                            <td style="border-bottom:1px solid #000 !important;"></td>
+                                                            <td style="border-bottom:1px solid #000 !important;" id="total_disc_op_id"></td>
+                                                          </tr>
+                                                          <tr>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td><strong>Grand Total</strong></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td style="font-size:30px;" id="grand_total_op_id"><strong></strong></td>
+                                                          </tr>
+                                                      </tbody>
+                                                  </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Impression Include</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="" class="form-control" disabled="disabled" value="test">
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label>Extra Impression</label>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <input type="text" name="" class="form-control" disabled="disabled" value="test">
+                                                </div>
+                                            </div>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id="sendQuote" style="width: 95px;" >Send Quote</button>
+                        <button class="btn btn-success" id="viewRules" style="width: 95px;">View Rules</button>
+                        <button class="btn btn-info" style="width: 95px; padding: 2px;"><i class="fa fa-shopping-cart" aria-hidden="true" style="font-size: 26px;"></i></button>
+                        <br>
+                        <br>
+                    </div>
+
+                    <div class="col-md-12" id="sendQuoteDiv" style="display: none;">
+                        <div class="box box-primary">
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <label>Mail</label>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="" name="" id="sendquote_cpq_email" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <label>Name</label>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="" name="" id="sendquote_cpq_Name" class="form-control">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="row">
+                                                    <div class="col-md-2" style="padding-left:0px;">
+                                                        <label>Company</label>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <input type="" name="" id="sendquote_cpq_Company"class="form-control">
+                                                    </div>
+                                                </div>  
+                                            </div>
+                                            <div class="col-md-2">     <button class="btn btn-primary" onclick="sendquote_cpq()" style="width: 95px;">Send</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+            </div>
+            </div>
+            </div>
+            <div class="tab-pane" id="tab_3" style="overflow:hidden;">
+                <div class="contact-container">
+                  <div class="row">
+                  <div class="col-md-12">
+                    <iframe frameborder="0" id="esignature_atwelcome"  src="" style="width: 100%; height: 400px;"></iframe>
+                    <br>
+                    <br>
+                  </div>
+                  </div>
+                  </div>
+                  </div>
+                  
+                  
+                  
+                  <div class="tab-pane" id="tab_4" style="overflow:hidden;">
+                <div class="contact-container">
+                  <div class="row">
+                  <div class="col-md-12">
+                   <iframe frameborder="0"  id="tracking_atwelcome" src="" style="width: 100%; height: 400px;"></iframe>
+
+                    <br>
+                    <br>
+                  </div></div></div></div>
+                  <div class="tab-pane" id="tab_5" style="overflow:hidden;">
+                <div class="contact-container">
+                  <div class="row">
+                  <div class="col-md-12">
+                    iframe
+                    <br>
+                    <br>
+                  </div></div></div></div>
+                  
+            </div><!-- tab-content" close -->
+            </div>
+            </div>
+            
+            
+            
+            
+            
+             <div class="contact-container">
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Tutorial Video</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="row">
+                          <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel" style="margin-top:10px;">
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                  <div class="item active">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                     <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/rHi77CwjGm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Multilingual Document(English- Chinese)</strong></h5>
+                                                              <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                       
+                                                      <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/4Pm57g78xeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Document generation Report Card with dynamic template</strong></h5>
+                                                              <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                       
+                                                       <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/qvFYaObwYPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>How to Generate Sale Purchase Agreement with Dynamic Clauses</strong></h5>
+                                                             <!--  <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                                  <div class="item">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                     <!--  <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                      
+                                                     <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/MQtOEFtA6tA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>How To generate Non Disclosure Agreement</strong></h5>
+                                                             <!--  <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        <!--   <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div> -->
+                                          <!-- <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div> -->
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-md-12" style="margin-top:-10px;">
+                              <div class="controls pull-right hidden-xs">
+                                  <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a> &nbsp;<a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=go6NqL6FFHs">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=go6NqL6FFHs" class="product-title">Approval Workflow</a>
+                             <!--  <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=IPlP1yQgqoc">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=IPlP1yQgqoc" class="product-title">Multilingual Generation(English-German)
+                              </a>
+                            <!-- <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=gXwRdLJPFVI">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=gXwRdLJPFVI" class="product-title">Multilingual Generation(English-Arabic)</a>
+                            <!-- <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=sCjsThNWbHM">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=sCjsThNWbHM" class="product-title">How To generate Offer Letter
+                              </a>
+                            <!-- <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=dddJuTJK3IA">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=dddJuTJK3IA" class="product-title">How to Generate Sale Purchase Agreement
+                           <!--    <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span> --> 
+                                </a>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=MF4PQ6Tzdoc">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=MF4PQ6Tzdoc" class="product-title">How to Generate Report Card
+                              </a>
+                            <!-- <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <%-- <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Xbox One </a>
+                            <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span>
+                          </div>
+                        </li> --%>
+                        <!-- /.item -->
+                        <%-- <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">PlayStation 4
+                              </a>
+                            <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span>
+                          </div>
+                        </li> --%>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">FAQs</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="parent-container">
+                        <ul class="faq">
+                          <li>
+                            <h3 class="question">What is Template Used For?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                              A Template is a file that serves as a starting point for a new document. When you open a template, it is pre-formatted in some way. For example, you might use template in Microsoft Word that is formatted as a business letter. The template would likely have a space for your name and address in the upper left corner, an area for the recipient's address a little below that on the left site, an area for the message body below that, and a spot for your signature at the bottom.
+                            </div>
+                          </li>
+                          <li>
+                            <h3 class="question">What is the purpose of Data Source?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                             Data Source records the number of Data that will get Merge with your Template.It can be in the form of excel sheet, or you can enter your data manually, or just import your contacts and use them to generate documents.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+      </div>
+      </section>
+      
+      <div class="modal fade" id="enter-manually-form-data">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>Enter Manually</h3>
+              <form action="" method="">
+                <div class="contact-form">
+                  <div class="contact-form-left" style="width: 100%;">
+                    <div class="row">  
+                      <div class="col-md-12" id="enterManuallyWelcomeId">
+                        <!-- <div class="form-group">
+                          <input type="text" name="" class="form-control" placeholder="Enter value" disabled="disabled">
+                        </div> -->
+                        <!-- <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Company</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>Address</label>
+                          <input type="text" name="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                          <label>DOB</label>
+                          <input type="text" name="" class="form-control">
+                        </div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success btn cancel-btn" data-dismiss="modal" onclick="getDataSourceFormDataDynamicwelcome();">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+      <!-- <div class="modal fade" id="enter-manually2">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <button type="button" class="close close-btn" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <div class="contact-model">
+              <h3>This is the test data we are using</h3>
+              <form action="" method="">
+                <div class="contact-form">
+                  <div class="contact-form-left" style="width: 100%;">
+                    <div class="row">  
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <input type="text" name="" class="form-control" placeholder="Enter value" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Name</label>
+                          <input type="text" name="" value="test name" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Company</label>
+                          <input type="text" name="" value="text company" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>Address</label>
+                          <input type="text" name="" value="test add" class="form-control" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                          <label>DOB</label>
+                          <input type="text" name="" value="10/07/1994" class="form-control" disabled="disabled">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      

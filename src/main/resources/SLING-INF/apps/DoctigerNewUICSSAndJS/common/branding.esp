@@ -1,0 +1,73 @@
+<section class="content-header main-head">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <span class="navbar-brand" style="color:#fff;">Branding</span>
+          </div>
+          <div class="menu-side">
+            <ul class="nav navbar-nav float-right">
+              <li class="dropdown-part">
+                <div class="dropdown">
+                  <button class="btn btn-success dropdown-toggle" type="button" data-toggle="dropdown">New Document
+                  <span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#"><i class="fa fa-plus"></i> Document</a></li>
+                    <li><a href="#"><i class="fa fa-upload"></i>Upload</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="row">
+        <div class="col-md-12">
+           <p>Logo</p>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1">
+              <img src="https://s3.amazonaws.com/pd-static-content/logos/logo-pandadoc.png" class="img-thumbnail">
+            </div>
+            <div class="col-md-5 branding-text">
+              <p>A logo will be displayed for your customers in all documents and emails you send. The image file should be in <strong>PNG or GIF</strong> format and scaled to <strong>200 x 50 pixels</strong>. An image with a transparent background is preferable.</p>
+              <input type="file" class="mt-3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-3">
+        <div class="col-md-12 mt-3">
+           <p>Workspace Icon</p>
+        </div>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-1">
+              <img src="https://s3.amazonaws.com/pd-static-content/logos/logo-pandadoc.png" class="img-thumbnail">
+            </div>
+            <div class="col-md-5 branding-text">
+              <p>Workspace icon will be displayed in the application and is not visible to your customers. Icon should have square proportions.</p>
+              <input type="file" class="mt-3">
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="border-brand"></div> 
+      <div class="row">
+        <div class="col-md-12">
+           <p>Emails</p>
+           <p>The logo selected above will be used for all emails.</p>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label>Email footer text</label>
+            <textarea class="form-control" rows="4" placeholder="PandaDoc is the all-in-one software that streamlines your sales workflows. Create, send, track, and eSign client-facing documents designed to win more business."></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /.content -->

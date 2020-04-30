@@ -1,0 +1,350 @@
+<section class="content" id="welcomeHideId" style="padding: 5px 0px 0px 0px;">
+      <!-- Info boxes -->
+      <div class="row">
+      <div class="col-md-12">
+         
+                  <div class="box box-danger">
+            <div class="box-header text-center with-border" style="background-color: #FFD73C;">
+              <h3 class="" style="margin: 0px; font-weight: bold; color: #000; font-size: 28px;">Generate Your First Document</h3>
+            </div>
+            <div class="box-body firstDocument labelboxfd">
+              <div class="row" style="padding: 30px 60px 60px 60px;">
+                <div class="col-md-4 text-center">
+                  <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/document.png">
+                  <a href="#generatedocumentesp" class="btn btn-success btn-block document-generation generateButtonNewwelcome" data-toggle="tab">Generate Document</a>
+                  <p class="firstDocumentP">Document generation Platform.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                  <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/contract.png">
+                  <button class="btn btn-warning btn-block contract-generation">Generate Contract</button>
+                  <p class="firstDocumentP">Clause library with workflows, configurable template, tracking and more.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                  <img src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/cpq01.png">
+                  <button class="btn btn-danger btn-block config-price-quote">Generate CPQ</button>
+                  <p class="firstDocumentP">Real time configurable price quotations online & on mail<br><br></p>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+            </div>
+            
+            <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Tutorial Video</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="row">
+                          <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel" style="margin-top:10px;">
+                              <!-- Wrapper for slides -->
+                              <div class="carousel-inner">
+                                  <div class="item active">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                     <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/rHi77CwjGm0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Multilingual Document(English- Chinese)</strong></h5>
+                                                              <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                       
+                                                      <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/4Pm57g78xeQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Document generation Report Card with dynamic template</strong></h5>
+                                                              <!-- <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <!-- <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                       
+                                                       <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/qvFYaObwYPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>How to Generate Sale Purchase Agreement with Dynamic Clauses</strong></h5>
+                                                             <!--  <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                  </div>
+                                  <div class="item">
+                                      <div class="row">
+                                          <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                     <!--  <img src="http://placehold.it/350x260" class="img-responsive" alt="a" /> -->
+                                                      
+                                                     <iframe width="350" class="img-responsive" height="260" src="https://www.youtube.com/embed/MQtOEFtA6tA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>How To generate Non Disclosure Agreement</strong></h5>
+                                                             <!--  <p>Lorem ipsum dolor sit amet</p> -->
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                        <!--   <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div> -->
+                                          <!-- <div class="col-sm-4">
+                                              <div class="col-item">
+                                                  <div class="photo">
+                                                      <img src="http://placehold.it/350x260" class="img-responsive" alt="a" />
+                                                  </div>
+                                                  <div class="info">
+                                                      <div class="row">
+                                                          <div class="price col-md-12">
+                                                              <h5><strong>Lorem ipsum dolor sit amet</strong></h5>
+                                                              <p>Lorem ipsum dolor sit amet</p>
+                                                          </div>
+                                                      </div>
+                                                      <div class="clearfix">
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div> -->
+                                      </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                          <div class="col-md-12" style="margin-top:-10px;">
+                              <div class="controls pull-right hidden-xs">
+                                  <a class="left fa fa-chevron-left btn btn-primary" href="#carousel-example-generic" data-slide="prev"></a> &nbsp;<a class="right fa fa-chevron-right btn btn-primary" href="#carousel-example-generic" data-slide="next"></a>
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=go6NqL6FFHs">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=go6NqL6FFHs" class="product-title">Approval Workflow</a>
+                             <!--  <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=IPlP1yQgqoc">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=IPlP1yQgqoc" class="product-title">Multilingual Generation(English-German)
+                              </a>
+                            <!-- <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=gXwRdLJPFVI">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=gXwRdLJPFVI" class="product-title">Multilingual Generation(English-Arabic)</a>
+                            <!-- <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=sCjsThNWbHM">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=sCjsThNWbHM" class="product-title">How To generate Offer Letter
+                              </a>
+                            <!-- <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">Feature Videos</h5>
+                    </div>
+                    <div class="box-body">
+                      <ul class="products-list product-list-in-box">
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=dddJuTJK3IA">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=dddJuTJK3IA" class="product-title">How to Generate Sale Purchase Agreement
+                           <!--    <span class="product-description">
+                                  Samsung 32" 1080p 60Hz LED Smart HDTV.
+                                </span> --> 
+                                </a>
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=MF4PQ6Tzdoc">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=MF4PQ6Tzdoc" class="product-title">How to Generate Report Card
+                              </a>
+                            <!-- <span class="product-description">
+                                  26" Mongoose Dolomite Men's 7-speed, Navy Blue.
+                                </span> -->
+                          </div>
+                        </li>
+                        <!-- /.item -->
+                        <%-- <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">Xbox One </a>
+                            <span class="product-description">
+                                  Xbox One Console Bundle with Halo Master Chief Collection.
+                                </span>
+                          </div>
+                        </li> --%>
+                        <!-- /.item -->
+                        <%-- <li class="item">
+                          <div class="product-img">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg">
+                              <img class="card-img-top img-fluid" src="<%=request.getContextPath()%>/apps/DoctigerNewUICSSAndJS/img/videoSplashImage.jpg" />
+                            </a>
+                          </div>
+                          <div class="product-info">
+                            <a data-fancybox href="https://www.youtube.com/watch?v=9xwazD5SyVg" class="product-title">PlayStation 4
+                              </a>
+                            <span class="product-description">
+                                  PlayStation 4 500GB Console (PS4)
+                                </span>
+                          </div>
+                        </li> --%>
+                        <!-- /.item -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="box box-primary">
+                    <div class="box-header bg-info with-border">
+                      <h5 class="box-title">FAQs</h5>
+                    </div>
+                    <div class="box-body">
+                      <div class="parent-container">
+                        <ul class="faq">
+                          <li>
+                            <h3 class="question">What is Template Used For?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                              A Template is a file that serves as a starting point for a new document. When you open a template, it is pre-formatted in some way. For example, you might use template in Microsoft Word that is formatted as a business letter. The template would likely have a space for your name and address in the upper left corner, an area for the recipient's address a little below that on the left site, an area for the message body below that, and a spot for your signature at the bottom.
+                            </div>
+                          </li>
+                          <li>
+                            <h3 class="question">What is the purpose of Data Source?
+                              <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="answer">
+                             Data Source records the number of Data that will get Merge with your Template.It can be in the form of excel sheet, or you can enter your data manually, or just import your contacts and use them to generate documents.
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+               </div>
+            </div>
+      </div>
+      </section>

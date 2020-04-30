@@ -1,0 +1,108 @@
+<section class="content" style="padding: 5px 0px 0px 0px;">
+
+
+<div class="row">
+        <div class="col-md-12">
+        
+         <div class="box box-danger">
+            <div class="box-header text-center with-border" style="background-color: #FFD73C;">
+              <h3 class="" style="margin: 0px; font-weight: bold; color: #000; font-size: 28px;">Fill the Data for Document Generation</h3>
+            </div>
+            <div class="box-body" style="padding: 90px 10px;">
+                <div class="row">
+                  <div class="col-md-2">
+                  </div>
+                  <div class="col-md-8" id="pastedFieldData">
+                   <!--  <form> -->
+                    
+                        <!-- <div class="form-group">
+                          <div class="row">
+                            <div class="col-md-2">
+                              <label>Name:</label>
+                            </div>
+                            <div class="col-md-10">
+                              <input type="text" name="text" placeholder="Enter Name.." class="form-control">
+                            </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label>Address:</label>
+                          </div>
+                          <div class="col-md-10">
+                            <input type="text" name="text" placeholder="Enter Address.." class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label>City:</label>
+                          </div>
+                          <div class="col-md-10">
+                            <input type="text" name="text" placeholder="Enter City.." class="form-control">
+                          </div>
+                        </div>
+                      </div> -->
+                      
+                      <!-- <div class="row">
+                        <div class="col-md-12">
+                          <hr>
+                          <button type="button" class="btn btn-success save-btn-document-generation">Save</button>
+                          <a href="#generatedocumentesp" class="btn btn-danger" data-toggle="tab">Back</a>
+                        </div>
+                      </div> -->
+                    <!-- </form> -->
+                    
+                  </div>
+                </div>
+                <div class="row mail-btn-section" style="display: none;margin-top:10px;">
+                <div class="col-md-12">
+                  <div class="box box-primary">
+                    <div class="box-body">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <button class="btn btn-danger btn-block preview-document previewDocumentNewWelcome" data-toggle="modal" data-target="#myModal">Preview Document</button>
+                        </div>
+                        <div class="col-md-4">
+                          <button class="btn btn-primary btn-block generate-document generateDocumentNewWelcome">Generate Document</button>
+                        </div>
+                        <div class="col-md-4">
+                          <button class="btn btn-danger btn-block generate-and-mail">Generate and Mail</button>
+                        </div>
+                      </div>
+                      <div class="row mail-box-text-section" style="display: none;">
+                      <br>
+                        <div class="col-md-4 pull-right">
+                          <div class="row">
+                            <!-- <form> -->
+                              <div class="form-group">
+                                <div class="col-md-1 text-right">
+                                  <label style="margin-top:5px;">Mail:</label>
+                                </div>
+                                <div class="col-md-8">
+                                  <input type="text" name="" class="form-control" placeholder="Enter mail ID" style="margin-left:18px;" id="sendMailNewWelcomeId">
+                                </div>
+                                <div class="col-md-3">
+                                  <button class="btn btn-success pull-right btn-block sendMailNewWelcome" style="padding:5px;">Send <i class="fa fa-send"></i></button>
+                                </div>
+                              </div>
+                            <!-- </form> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div style="text-align: center;"><p id="documentUrlGenerateIdNewWelcomePage"></p></div>
+              
+            </div>
+          </div>
+
+
+</div>
+</div>
+</section>
